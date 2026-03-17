@@ -39,7 +39,7 @@
     :root{--navy:#0d2137;--navy2:#163550;--green:#1a5c3a;--green2:#236b45;--gold:#c8922a;--gold2:#e8a830;--cream:#fdf8f0;--text:#1a1a2a;--muted:#5a6070;--border:#e4ddd0;--red:#c0392b;--white:#ffffff;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
-    body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--cream);line-height:1.6;}
+    body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--cream);line-height:1.6;}    #dev-banner{position:sticky;top:0;z-index:1001;}
     a{color:inherit;text-decoration:none;}
     img{max-width:100%;display:block;}
 
@@ -359,6 +359,16 @@
 </head>
 <body>
 
+<!-- DEV BANNER -->
+<div id="dev-banner" style="background:linear-gradient(90deg,var(--navy),#1a3a5c,var(--navy));border-bottom:1px solid rgba(200,146,42,0.3);padding:10px 20px;text-align:center;position:relative;z-index:1001;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
+    <span style="font-size:16px;">🚧</span>
+    <span style="font-size:13px;color:rgba(255,255,255,0.85);font-weight:500;letter-spacing:0.5px;">This website is currently under development — more features and content coming soon. Stay tuned!</span>
+    <a href="#contact" style="font-size:12px;color:var(--gold2);font-weight:700;text-decoration:none;border:1px solid rgba(200,146,42,0.4);padding:4px 12px;border-radius:20px;white-space:nowrap;transition:0.2s;" onmouseover="this.style.background='rgba(200,146,42,0.15)'" onmouseout="this.style.background='transparent'">Contact Us →</a>
+    <button onclick="document.getElementById('dev-banner').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.4);font-size:18px;cursor:pointer;line-height:1;padding:0 0 0 8px;" aria-label="Close banner">×</button>
+  </div>
+</div>
+
 <!-- NAVBAR -->
 <nav id="navbar" role="navigation" aria-label="Main navigation">
   <a href="#hero" class="nav-brand">
@@ -387,6 +397,8 @@
   <a href="#videos" onclick="closeMobileNav()">Videos</a>
   <a href="#faq" onclick="closeMobileNav()">FAQ</a>
   <a href="#useful-links" onclick="closeMobileNav()">Useful Links</a>
+  <a href="#careers" onclick="closeMobileNav()">Careers</a>
+  <a href="#feedback" onclick="closeMobileNav()">Feedback</a>
   <a href="#contact" onclick="closeMobileNav()">Contact</a>
   <a href="#booking" onclick="closeMobileNav()" style="color:var(--gold2);font-weight:700;">✈ Book Now</a>
 </div>
@@ -401,7 +413,7 @@
     <p class="hero-tagline">Discover Nepal – Stay, Explore, Experience</p>
     <p class="hero-sub">Mitrapark-7, Kathmandu &nbsp;·&nbsp; Licensed Travel Agency</p>
     <p style="font-family:'Playfair Display',serif;font-size:clamp(15px,2.5vw,20px);color:rgba(255,255,255,0.75);margin-bottom:8px;letter-spacing:0.5px;text-shadow:0 2px 10px rgba(0,0,0,0.4);animation:heroFadeUp 1s ease 0.25s both;">पारिवारिक आनन्द प्रकृतीको साथमा</p>
-    <div style="margin-bottom:8px;">
+    <div style="margin-bottom:24px;">
       <div class="hero-search-wrap">
         <span style="font-size:18px;">🔍</span>
         <input type="text" id="hero-search" placeholder="Search destinations, packages, services..." autocomplete="off" oninput="doSearch(this.value)" onkeydown="if(event.key==='Escape')closeSearch()"/>
@@ -439,11 +451,7 @@
         </datalist>
       </div>
     </div>
-    <div class="hero-contacts">
-      <a href="https://wa.me/9779823356668" target="_blank" rel="noopener">💬 WhatsApp: 9823356668</a>
-      <a href="tel:+9779851007025">📞 9851007025</a>
-      <a href="mailto:info@mats.com.np">✉ info@mats.com.np</a>
-    </div>
+
   </div>
 </section>
 
@@ -824,7 +832,7 @@
         <div class="testi-author"><div class="testi-avatar">B</div><div><div class="testi-name">Bikash Thapa</div><div class="testi-role">Kathmandu–Pokhara – Bus Ticket</div></div></div>
       </div>
     </div>
-    <p class="testi-note">* Replace these with real customer reviews as you collect them. Ask happy customers to send a short message on WhatsApp.</p>
+
   </div>
 </section>
 
@@ -832,7 +840,18 @@
 <!-- VIDEOS & TIKTOK -->
 <section id="videos" style="background:var(--navy);padding:88px 24px;">
   <div class="section-inner">
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:start;">
+    <div class="section-eyebrow" style="color:var(--gold);">Nepal on Video</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;">See Nepal Through Our Lens</h2>
+    <p style="font-size:16px;color:rgba(255,255,255,0.55);max-width:560px;line-height:1.75;margin-bottom:40px;">Explore Nepal's breathtaking landscapes and rich culture through these featured videos.</p>
+    <!-- TikTok full width -->
+    <div style="border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);background:#000;margin-bottom:24px;width:100%;max-height:220px;">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@matsnepal" data-unique-id="matsnepal" data-embed-type="creator" style="max-width:100%;min-width:100%;margin:0;border:none;background:#000;">
+        <section><a target="_blank" href="https://www.tiktok.com/@matsnepal?refer=creator_embed">@matsnepal</a></section>
+      </blockquote>
+      <script async src="https://www.tiktok.com/embed.js"></script>
+    </div>
+    <!-- YouTube 2-col -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
       <div style="border-radius:16px;overflow:hidden;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);box-shadow:0 16px 48px rgba(0,0,0,0.4);">
         <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
           <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" src="https://www.youtube.com/embed/P7ClYUkIQls?si=sbeQY7lIYNJazV1i" title="MATS Nepal Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
@@ -842,12 +861,6 @@
         <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
           <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" src="https://www.youtube.com/embed/6bA6H4tCoac?si=Sj6SbuZsc59_bngz" title="MATS Nepal Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
         </div>
-      </div>
-      <div style="border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);box-shadow:0 16px 48px rgba(0,0,0,0.4);background:#000;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@matsnepal" data-unique-id="matsnepal" data-embed-type="creator" style="max-width:100%;min-width:100%;margin:0;border:none;background:#000;">
-          <section><a target="_blank" href="https://www.tiktok.com/@matsnepal?refer=creator_embed">@matsnepal</a></section>
-        </blockquote>
-        <script async src="https://www.tiktok.com/embed.js"></script>
       </div>
     </div>
   </div>
@@ -958,6 +971,80 @@
   </div>
 </section>
 
+
+<!-- JOIN OUR TEAM -->
+<section id="careers" style="background:var(--cream);padding:88px 24px;">
+  <div class="section-inner">
+    <div class="section-eyebrow">Careers</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:var(--text);line-height:1.15;margin-bottom:16px;">Join Our Team</h2>
+    <p style="font-size:16px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:48px;">We are looking for talented, passionate individuals who love travel and want to be part of building something meaningful in Nepal's tourism industry.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;">
+      <div style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:36px;transition:all 0.3s;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 16px 48px rgba(200,146,42,0.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));"></div>
+        <div style="font-size:40px;margin-bottom:16px;">🌱</div>
+        <h3 style="font-size:20px;font-weight:700;color:var(--text);margin-bottom:10px;">Entry Level Position</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:24px;">Starting your career in travel? We welcome enthusiastic beginners who are eager to learn, grow and contribute to Nepal's tourism industry.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;">
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text);">Fresh graduates welcome</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text);">On-the-job training</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text);">Kathmandu based</span>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyzPHlRbTpM8jXCZoySIVKz8eO1GmEmzTlT8jEqjFyk926Gw/viewform?usp=sharing" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-size:14px;font-weight:700;padding:13px 24px;border-radius:10px;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Apply Now →</a>
+      </div>
+      <div style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:36px;transition:all 0.3s;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 16px 48px rgba(200,146,42,0.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green2));"></div>
+        <div style="font-size:40px;margin-bottom:16px;">🗺️</div>
+        <h3 style="font-size:20px;font-weight:700;color:var(--text);margin-bottom:10px;">Travel / Tour Operator</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:24px;">Experienced in travel operations? Join us to design tours, manage packages and deliver exceptional travel experiences across Nepal.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;">
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text);">Experience required</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text);">Tour planning</span>
+          <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text);">Client management</span>
+        </div>
+        <a href="https://forms.gle/qUeucn5xiiDBRKCa7" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-size:14px;font-weight:700;padding:13px 24px;border-radius:10px;transition:0.2s;" onmouseover="this.style.background='var(--navy)'" onmouseout="this.style.background='var(--green)'">Apply Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEEDBACK -->
+<section id="feedback" style="background:var(--navy);padding:88px 24px;">
+  <div class="section-inner" style="max-width:700px;">
+    <div class="section-eyebrow" style="color:var(--gold);">Your Voice Matters</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;">Share Your Feedback</h2>
+    <p style="font-size:16px;color:rgba(255,255,255,0.55);line-height:1.75;margin-bottom:40px;">Help us improve. Whether you booked with us, visited our website, or just have a suggestion — we genuinely want to hear from you.</p>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(200,146,42,0.15);border-radius:20px;padding:36px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--green2));"></div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label style="display:block;font-size:11px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Your Name</label>
+          <input type="text" id="fb-name" placeholder="e.g. Ramesh Shrestha" style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='rgba(255,255,255,0.12)'"/>
+        </div>
+        <div>
+          <label style="display:block;font-size:11px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Email or Phone <span style="font-weight:400;text-transform:none;">(optional)</span></label>
+          <input type="text" id="fb-contact" placeholder="email or phone number" style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='rgba(255,255,255,0.12)'"/>
+        </div>
+        <div>
+          <label style="display:block;font-size:11px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Your Feedback</label>
+          <textarea id="fb-message" rows="4" placeholder="Tell us about your experience, a suggestion, or anything on your mind..." style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;resize:vertical;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='rgba(255,255,255,0.12)'"></textarea>
+        </div>
+        <div>
+          <label style="display:block;font-size:11px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Rating</label>
+          <div id="star-rating" style="display:flex;gap:8px;">
+            <span class="star" onclick="setRating(1)" style="font-size:28px;cursor:pointer;opacity:0.3;transition:0.2s;">★</span>
+            <span class="star" onclick="setRating(2)" style="font-size:28px;cursor:pointer;opacity:0.3;transition:0.2s;">★</span>
+            <span class="star" onclick="setRating(3)" style="font-size:28px;cursor:pointer;opacity:0.3;transition:0.2s;">★</span>
+            <span class="star" onclick="setRating(4)" style="font-size:28px;cursor:pointer;opacity:0.3;transition:0.2s;">★</span>
+            <span class="star" onclick="setRating(5)" style="font-size:28px;cursor:pointer;opacity:0.3;transition:0.2s;">★</span>
+          </div>
+        </div>
+        <button onclick="submitFeedback()" style="background:var(--gold);color:var(--navy);border:none;border-radius:10px;padding:14px 28px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:0.2s;align-self:flex-start;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Send Feedback →</button>
+        <div id="fb-success" style="display:none;background:rgba(26,92,58,0.2);border:1px solid rgba(26,92,58,0.4);border-radius:10px;padding:14px 18px;color:#6ee7b7;font-size:14px;font-weight:600;">✅ Thank you for your feedback! We really appreciate it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" aria-labelledby="contact-title">
   <div class="section-inner">
@@ -1022,6 +1109,8 @@
           <li><a href="#mission">About & Mission</a></li>
           <li><a href="#why">Why Choose MATS</a></li>
           <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#feedback">Feedback</a></li>
           <li><a href="#videos">Videos</a></li><li><a href="#faq">FAQ</a></li>
           <li><a href="#useful-links">Useful Links</a></li>
           <li><a href="javascript:void(0)" onclick="document.getElementById('privacy-modal').classList.add('open')">Privacy Policy</a></li>
@@ -1184,12 +1273,30 @@
   function goToBooking(){window.open(currentTab==='bus'?busURL:flightURL,'_blank');}
 
   // FAQ
-  function toggleFaq(el){
-    var body=el.nextElementSibling;
-    var isOpen=body.classList.contains('open');
-    document.querySelectorAll('.faq-body.open').forEach(function(b){b.classList.remove('open');});
-    document.querySelectorAll('.faq-q.active').forEach(function(q){q.classList.remove('active');});
-    if(!isOpen){body.classList.add('open');el.classList.add('active');}
+  // STAR RATING
+  var currentRating = 0;
+  function setRating(n) {
+    currentRating = n;
+    document.querySelectorAll('.star').forEach(function(s, i) {
+      s.style.opacity = i < n ? '1' : '0.3';
+      s.style.color = i < n ? 'var(--gold2)' : '';
+    });
+  }
+
+  // FEEDBACK SUBMIT - sends via WhatsApp
+  function submitFeedback() {
+    var name = document.getElementById('fb-name').value.trim();
+    var contact = document.getElementById('fb-contact').value.trim();
+    var message = document.getElementById('fb-message').value.trim();
+    if (!message) { alert('Please write your feedback before submitting.'); return; }
+    var stars = currentRating > 0 ? currentRating + '/5 stars' : 'No rating';
+    var text = 'Feedback from MATS website:%0A%0AName: ' + encodeURIComponent(name || 'Anonymous') + '%0AContact: ' + encodeURIComponent(contact || 'Not provided') + '%0ARating: ' + encodeURIComponent(stars) + '%0A%0AFeedback:%0A' + encodeURIComponent(message);
+    window.open('https://wa.me/9779823356668?text=' + text, '_blank');
+    document.getElementById('fb-success').style.display = 'block';
+    document.getElementById('fb-name').value = '';
+    document.getElementById('fb-contact').value = '';
+    document.getElementById('fb-message').value = '';
+    setRating(0);
   }
 
   // PARALLAX
