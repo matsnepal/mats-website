@@ -356,8 +356,59 @@
     @media(max-width:640px){.nav-links{display:none;}.nav-hamburger{display:flex;}.booking-grid{grid-template-columns:1fr 1fr;}.booking-grid .book-btn-wrap{grid-column:1/-1;}.book-btn{width:100%;}.footer-top{grid-template-columns:1fr;gap:28px;}section{padding:64px 16px;}.booking-card{padding:20px 16px;}}
     @media(max-width:480px){.booking-grid{grid-template-columns:1fr;}}
   </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BWDFNBFXP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9BWDFNBFXP');
+  </script>
 </head>
 <body>
+
+<!-- LOADING SCREEN -->
+<div id="mats-loader" style="position:fixed;inset:0;background:var(--navy);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transition:opacity 0.6s ease,visibility 0.6s ease;">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+    <div style="font-family:'Permanent Marker',cursive;font-size:72px;color:#fff;letter-spacing:6px;line-height:1;text-shadow:0 0 40px rgba(200,146,42,0.4);">
+      M<span style="color:var(--gold2);">A</span>TS
+    </div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:3px;text-transform:uppercase;">Maitri Apartment & Travel Services</div>
+  </div>
+  <div style="width:200px;height:2px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;">
+    <div id="mats-loader-bar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:2px;transition:width 0.1s linear;"></div>
+  </div>
+  <div style="font-size:12px;color:rgba(255,255,255,0.25);letter-spacing:2px;text-transform:uppercase;">Loading...</div>
+</div>
+<style>
+  #mats-loader.hidden{opacity:0;visibility:hidden;pointer-events:none;}
+  :root{--gold:#c8922a;--gold2:#e8a830;--navy:#0d2137;}
+</style>
+<script>
+  (function(){
+    var bar = document.getElementById('mats-loader-bar');
+    var loader = document.getElementById('mats-loader');
+    var width = 0;
+    var interval = setInterval(function(){
+      width += Math.random() * 18 + 8;
+      if(width >= 95) { width = 95; clearInterval(interval); }
+      bar.style.width = Math.min(width, 95) + '%';
+    }, 120);
+    window.addEventListener('load', function(){
+      clearInterval(interval);
+      bar.style.width = '100%';
+      setTimeout(function(){
+        loader.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 400);
+    });
+    document.body.style.overflow = 'hidden';
+    setTimeout(function(){
+      loader.classList.add('hidden');
+      document.body.style.overflow = '';
+    }, 3000);
+  })();
+</script>
 
 <!-- DEV BANNER -->
 <div id="dev-banner" style="background:linear-gradient(90deg,var(--navy),#1a3a5c,var(--navy));border-bottom:1px solid rgba(200,146,42,0.3);padding:10px 20px;text-align:center;position:relative;z-index:1001;">
@@ -843,28 +894,43 @@
     <div class="section-eyebrow" style="color:var(--gold);">Nepal on Video</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;">See Nepal Through Our Lens</h2>
     <p style="font-size:16px;color:rgba(255,255,255,0.55);max-width:560px;line-height:1.75;margin-bottom:40px;">Explore Nepal's breathtaking landscapes and rich culture through these featured videos.</p>
-    <!-- TikTok full width -->
-    <div style="border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);background:#000;margin-bottom:24px;width:100%;max-height:220px;">
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@matsnepal" data-unique-id="matsnepal" data-embed-type="creator" style="max-width:100%;min-width:100%;margin:0;border:none;background:#000;">
-        <section><a target="_blank" href="https://www.tiktok.com/@matsnepal?refer=creator_embed">@matsnepal</a></section>
-      </blockquote>
-      <script async src="https://www.tiktok.com/embed.js"></script>
-    </div>
-    <!-- YouTube 2-col -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
-      <div style="border-radius:16px;overflow:hidden;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);box-shadow:0 16px 48px rgba(0,0,0,0.4);">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:stretch;">
+      <!-- YouTube 1 -->
+      <div style="border-radius:16px;overflow:hidden;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);box-shadow:0 16px 48px rgba(0,0,0,0.4);display:flex;flex-direction:column;">
         <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
           <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" src="https://www.youtube.com/embed/P7ClYUkIQls?si=sbeQY7lIYNJazV1i" title="MATS Nepal Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
-      <div style="border-radius:16px;overflow:hidden;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);box-shadow:0 16px 48px rgba(0,0,0,0.4);">
+      <!-- YouTube 2 -->
+      <div style="border-radius:16px;overflow:hidden;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);box-shadow:0 16px 48px rgba(0,0,0,0.4);display:flex;flex-direction:column;">
         <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
           <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" src="https://www.youtube.com/embed/6bA6H4tCoac?si=Sj6SbuZsc59_bngz" title="MATS Nepal Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      <!-- TikTok Follow Card -->
+      <div style="border-radius:16px;background:#000;border:1px solid rgba(255,0,80,0.2);box-shadow:0 16px 48px rgba(0,0,0,0.4);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 28px;text-align:center;position:relative;overflow:hidden;min-height:200px;">
+        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(255,0,80,0.12) 0%,transparent 65%),radial-gradient(ellipse at 50% 100%,rgba(0,245,212,0.08) 0%,transparent 65%);pointer-events:none;"></div>
+        <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:16px;">
+          <div style="width:64px;height:64px;background:linear-gradient(135deg,#ff0050,#00f5d4);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 24px rgba(255,0,80,0.3);">🎵</div>
+          <div>
+            <div style="font-family:'Permanent Marker',cursive;font-size:22px;color:#fff;letter-spacing:1px;">@matsnepal</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.45);margin-top:6px;line-height:1.6;">Nepal travel content,<br/>destination reels & updates</div>
+          </div>
+          <a href="https://www.tiktok.com/@matsnepal" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#ff0050;color:#fff;font-size:14px;font-weight:700;padding:12px 24px;border-radius:10px;transition:0.2s;text-decoration:none;" onmouseover="this.style.background='#cc003f'" onmouseout="this.style.background='#ff0050'">
+            Follow on TikTok →
+          </a>
+          <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,0.25);">
+            <span style="width:6px;height:6px;background:#ff0050;border-radius:50%;display:inline-block;animation:tikpulse 2s ease-in-out infinite;"></span>
+            Active on TikTok
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+<style>
+@keyframes tikpulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.4);}}
+</style>
 
 <!-- FAQ -->
 <section id="faq" aria-labelledby="faq-title">
@@ -1148,15 +1214,6 @@
     </div>
   </div>
 
-<div style="background:#040a12;padding:16px 24px;text-align:center;border-top:1px solid rgba(255,255,255,0.04);">
-  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
-    <span style="font-size:12px;color:rgba(255,255,255,0.2);letter-spacing:1px;text-transform:uppercase;">Visitors</span>
-    <a href="https://www.hitwebcounter.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;">
-      <img src="https://hitwebcounter.com/counter/counter.php?page=20526707&style=0006&nbdigits=6&type=page&initCount=0" title="Web Counter" alt="Visitor Counter" style="height:22px;border:none;opacity:0.6;" loading="lazy"/>
-    </a>
-    <span style="font-size:12px;color:rgba(255,255,255,0.15);">total visits</span>
-  </div>
-</div>
 </footer>
 
 <!-- PRIVACY POLICY MODAL -->
