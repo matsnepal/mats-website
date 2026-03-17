@@ -1249,126 +1249,172 @@
 <a class="wa-float" href="https://wa.me/9779823356668" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 
 <script>
-  // AUTO COPYRIGHT YEAR
-  document.getElementById('copy-year').textContent = new Date().getFullYear();
+// AUTO COPYRIGHT YEAR
+document.getElementById('copy-year').textContent = new Date().getFullYear();
 
-  // SEARCH
-  var SD=[
-    {icon:'✈️',title:'Domestic Flight Booking',sub:'Book flights within Nepal — all major routes',s:'#booking'},
-    {icon:'🌍',title:'International Flight Booking',sub:'Dubai, Delhi, Bangkok, Singapore, London and more',s:'#booking'},
-    {icon:'🚌',title:'Bus & Transport Booking',sub:'Tourist buses, jeeps and vehicles across Nepal',s:'#booking'},
-    {icon:'🙏',title:'Char Ganesh Pilgrimage Tour',sub:'1-day Kathmandu Valley spiritual tour',s:'#packages'},
-    {icon:'🛕',title:'Char Narayan Temples Tour',sub:'1-day cultural pilgrimage, Kathmandu Valley',s:'#packages'},
-    {icon:'🗺️',title:'Custom Nepal Tour Package',sub:'Tailor-made itinerary for any destination',s:'#packages'},
-    {icon:'🏠',title:'Studio Apartment — Mitrapark',sub:'Short-term and long-term stays in Kathmandu',s:'#stay'},
-    {icon:'✈️',title:'Kathmandu Flights',sub:'Domestic flights to/from Kathmandu',s:'#booking'},
-    {icon:'✈️',title:'Pokhara Flights',sub:'Kathmandu to Pokhara and return',s:'#booking'},
-    {icon:'✈️',title:'Lukla Flights',sub:'Flights to Lukla for Everest Base Camp trek',s:'#booking'},
-    {icon:'🚌',title:'Kathmandu to Pokhara Bus',sub:'Tourist bus booking Kathmandu–Pokhara',s:'#booking'},
-    {icon:'🚌',title:'Kathmandu to Chitwan Bus',sub:'Bus booking to Chitwan National Park',s:'#booking'},
-    {icon:'🚌',title:'Kathmandu to Lumbini Bus',sub:'Bus booking to Lumbini, birthplace of Buddha',s:'#booking'},
-    {icon:'📄',title:'Permits & Visa Support',sub:'Coming soon — TIMS, trekking permits',s:'#services'},
-    {icon:'🏔️',title:'Trekking & Adventure',sub:'Coming soon — guided Nepal trekking',s:'#future-packages'},
-    {icon:'🎊',title:'Adventure Packages',sub:'Rafting, paragliding, bungee — coming soon',s:'#future-packages'},
-    {icon:'🎵',title:'Follow @matsnepal on TikTok',sub:'Nepal travel content and destination reels',s:'#promo'},
-    {icon:'📍',title:'MATS Office — Mitrapark-7',sub:'Visit us in Kathmandu',s:'#contact'},
-    {icon:'🏛️',title:'About MATS',sub:'Licensed travel agency, Est. 2024',s:'#mission'},
-    {icon:'❓',title:'FAQ',sub:'Frequently asked questions about MATS',s:'#faq'},
-    {icon:'🔗',title:'Nepal Tourism Board',sub:'Official tourism links and advisories',s:'#useful-links'},
-    {icon:'🚨',title:'Tourist Police',sub:'Emergency: 1144 / 014247041',s:'#useful-links'},
-    {icon:'🇳🇵',title:'Lumbini Pilgrimage',sub:'Birthplace of Buddha — ask us about tours',s:'#packages'},
-    {icon:'🇳🇵',title:'Chitwan Tour',sub:'Jungle safari and wildlife tours — ask us',s:'#packages'},
-    {icon:'🧘',title:'Wellness & Ayurveda',sub:'Coming soon — wellness packages',s:'#future-packages'},
-    {icon:'💍',title:'Destination Wedding Nepal',sub:'Coming soon — special packages',s:'#future-packages'},
-  ];
+// SEARCH DATA
+var SD = [
+  {icon:'✈️', title:'Domestic Flight Booking', sub:'Book flights within Nepal — all major routes', s:'#booking'},
+  {icon:'🌍', title:'International Flight Booking', sub:'Dubai, Delhi, Bangkok, Singapore, London and more', s:'#booking'},
+  {icon:'🚌', title:'Bus & Transport Booking', sub:'Tourist buses, jeeps and vehicles across Nepal', s:'#booking'},
+  {icon:'🙏', title:'Char Ganesh Pilgrimage Tour', sub:'1-day Kathmandu Valley spiritual tour', s:'#packages'},
+  {icon:'🛕', title:'Char Narayan Temples Tour', sub:'1-day cultural pilgrimage, Kathmandu Valley', s:'#packages'},
+  {icon:'🗺️', title:'Custom Nepal Tour Package', sub:'Tailor-made itinerary for any destination', s:'#packages'},
+  {icon:'🏠', title:'Studio Apartment Mitrapark', sub:'Short-term and long-term stays in Kathmandu', s:'#stay'},
+  {icon:'✈️', title:'Kathmandu Flights', sub:'Domestic flights to/from Kathmandu', s:'#booking'},
+  {icon:'✈️', title:'Pokhara Flights', sub:'Kathmandu to Pokhara and return', s:'#booking'},
+  {icon:'✈️', title:'Lukla Flights', sub:'Flights to Lukla for Everest Base Camp trek', s:'#booking'},
+  {icon:'🚌', title:'Kathmandu to Pokhara Bus', sub:'Tourist bus booking Kathmandu to Pokhara', s:'#booking'},
+  {icon:'🚌', title:'Kathmandu to Chitwan Bus', sub:'Bus booking to Chitwan National Park', s:'#booking'},
+  {icon:'🚌', title:'Kathmandu to Lumbini Bus', sub:'Bus booking to Lumbini birthplace of Buddha', s:'#booking'},
+  {icon:'📄', title:'Permits and Visa Support', sub:'Coming soon — TIMS trekking permits documentation', s:'#services'},
+  {icon:'🏔️', title:'Trekking and Adventure', sub:'Coming soon — guided Nepal trekking', s:'#future-packages'},
+  {icon:'🧗', title:'Adventure Packages', sub:'Rafting paragliding bungee — coming soon', s:'#future-packages'},
+  {icon:'🎵', title:'Follow matsnepal on TikTok', sub:'Nepal travel content and destination reels', s:'#videos'},
+  {icon:'📍', title:'MATS Office Mitrapark Kathmandu', sub:'Visit us in Kathmandu', s:'#contact'},
+  {icon:'🏛️', title:'About MATS', sub:'Licensed travel agency Est 2024', s:'#mission'},
+  {icon:'❓', title:'FAQ', sub:'Frequently asked questions about MATS', s:'#faq'},
+  {icon:'🔗', title:'Nepal Tourism Board', sub:'Official tourism links and advisories', s:'#useful-links'},
+  {icon:'🚨', title:'Tourist Police', sub:'Emergency 1144 and 014247041', s:'#useful-links'},
+  {icon:'🇳🇵', title:'Lumbini Pilgrimage', sub:'Birthplace of Buddha — ask us about tours', s:'#packages'},
+  {icon:'🇳🇵', title:'Chitwan Tour', sub:'Jungle safari and wildlife tours — ask us', s:'#packages'},
+  {icon:'🧘', title:'Wellness and Ayurveda', sub:'Coming soon — wellness packages', s:'#future-packages'},
+  {icon:'💍', title:'Destination Wedding Nepal', sub:'Coming soon — special packages', s:'#future-packages'},
+  {icon:'💼', title:'Join Our Team', sub:'Entry level and travel operator positions open', s:'#careers'},
+  {icon:'💬', title:'Contact MATS', sub:'WhatsApp 9823356668 or call 9851007025', s:'#contact'}
+];
 
-  function doSearch(q){
-    var box=document.getElementById('search-results');
-    q=q.trim().toLowerCase();
-    if(!q){box.style.display='none';box.innerHTML='';return;}
-    var res=SD.filter(function(d){return d.title.toLowerCase().includes(q)||d.sub.toLowerCase().includes(q);});
-    if(res.length===0){
-      box.innerHTML='<div class="sri-none">No results for "<strong>'+q+'</strong>" — try "flight", "bus", "Pokhara", "package" or <a href="https://wa.me/9779823356668" target="_blank" style="color:var(--green)">ask us on WhatsApp</a></div>';
-    } else {
-      box.innerHTML=res.slice(0,7).map(function(r){
-        return '<div class="sri" onclick="goToSection(''+r.s+'')"><div class="sri-icon">'+r.icon+'</div><div><div class="sri-title">'+r.title+'</div><div class="sri-sub">'+r.sub+'</div></div></div>';
-      }).join('');
-    }
-    box.style.display='block';
-  }
-  function goToSection(id){
-    document.getElementById('search-results').style.display='none';
-    document.getElementById('hero-search').value='';
-    var el=document.querySelector(id);
-    if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
-  }
-  function closeSearch(){document.getElementById('search-results').style.display='none';}
-  document.addEventListener('click',function(e){
-    if(!e.target.closest('.hero-search-wrap')&&!e.target.closest('#search-results'))closeSearch();
+function doSearch(q) {
+  var box = document.getElementById('search-results');
+  if (!box) return;
+  q = q.trim().toLowerCase();
+  if (!q) { box.style.display = 'none'; box.innerHTML = ''; return; }
+  var res = SD.filter(function(d) {
+    return d.title.toLowerCase().indexOf(q) > -1 || d.sub.toLowerCase().indexOf(q) > -1;
   });
-
-  // BOOKING
-  var currentTab='flight';
-  var flightURL='https://docs.google.com/forms/d/e/1FAIpQLScihvgV1O2NOBEX1b6byjaqLV-TF-Lth90KMV1iORC8J0sTFg/viewform';
-  var busURL='https://docs.google.com/forms/d/e/1FAIpQLSdCwPcJgTAYyQR9ZnitRj2BsUwbTNlglSbXbTVOgVEa3UBANQ/viewform';
-  function switchTab(type,btn){
-    currentTab=type;
-    document.querySelectorAll('.tab-pill').forEach(function(b){b.classList.remove('active');});
-    btn.classList.add('active');
-    if(type==='bus'){
-      document.getElementById('lbl-from').textContent='Start Point';
-      document.getElementById('lbl-to').textContent='Destination';
-      document.getElementById('main-book-btn').textContent='BOOK BUS NOW';
-      document.getElementById('extra-wrap').innerHTML='<label>Mode of Transport</label><select id="inp-extra"><option value="">Select...</option><option>Tourist Bus</option><option>Deluxe Night Bus</option><option>Private Jeep (Scorpio)</option><option>Hiace</option><option>Private Car / SUV</option><option>Local Bus</option></select>';
-    } else {
-      document.getElementById('lbl-from').textContent='Departure City';
-      document.getElementById('lbl-to').textContent='Arrival City';
-      document.getElementById('main-book-btn').textContent='BOOK NOW';
-      document.getElementById('extra-wrap').innerHTML='<label>Nationality</label><input list="nat-list" id="inp-extra" placeholder="e.g. Nepali" autocomplete="off"/>';
+  if (res.length === 0) {
+    box.innerHTML = '<div class="sri-none">No results for "<strong>' + q + '</strong>" — try "flight", "bus", "Pokhara"</div>';
+  } else {
+    var out = '';
+    var shown = res.slice(0, 7);
+    for (var i = 0; i < shown.length; i++) {
+      out += '<div class="sri" data-s="' + shown[i].s + '">';
+      out += '<div class="sri-icon">' + shown[i].icon + '</div>';
+      out += '<div><div class="sri-title">' + shown[i].title + '</div>';
+      out += '<div class="sri-sub">' + shown[i].sub + '</div></div></div>';
+    }
+    box.innerHTML = out;
+    var items = box.querySelectorAll('.sri[data-s]');
+    for (var j = 0; j < items.length; j++) {
+      items[j].addEventListener('click', function() { goToSection(this.getAttribute('data-s')); });
     }
   }
-  function goToBooking(){window.open(currentTab==='bus'?busURL:flightURL,'_blank');}
+  box.style.display = 'block';
+}
 
-  // FAQ
-  // STAR RATING
-  var currentRating = 0;
-  function setRating(n) {
-    currentRating = n;
-    document.querySelectorAll('.star').forEach(function(s, i) {
-      s.style.opacity = i < n ? '1' : '0.3';
-      s.style.color = i < n ? 'var(--gold2)' : '';
-    });
+function goToSection(id) {
+  document.getElementById('search-results').style.display = 'none';
+  var inp = document.getElementById('hero-search');
+  if (inp) inp.value = '';
+  var el = document.querySelector(id);
+  if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
+}
+
+function closeSearch() {
+  var box = document.getElementById('search-results');
+  if (box) box.style.display = 'none';
+}
+
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.hero-search-wrap') && !e.target.closest('#search-results')) {
+    closeSearch();
   }
+});
 
-  // FEEDBACK SUBMIT - sends via WhatsApp
-  function submitFeedback() {
-    var name = document.getElementById('fb-name').value.trim();
-    var contact = document.getElementById('fb-contact').value.trim();
-    var message = document.getElementById('fb-message').value.trim();
-    if (!message) { alert('Please write your feedback before submitting.'); return; }
-    var stars = currentRating > 0 ? currentRating + '/5 stars' : 'No rating';
-    var text = 'Feedback from MATS website:%0A%0AName: ' + encodeURIComponent(name || 'Anonymous') + '%0AContact: ' + encodeURIComponent(contact || 'Not provided') + '%0ARating: ' + encodeURIComponent(stars) + '%0A%0AFeedback:%0A' + encodeURIComponent(message);
-    window.open('https://wa.me/9779823356668?text=' + text, '_blank');
-    document.getElementById('fb-success').style.display = 'block';
-    document.getElementById('fb-name').value = '';
-    document.getElementById('fb-contact').value = '';
-    document.getElementById('fb-message').value = '';
-    setRating(0);
+// BOOKING
+var currentTab = 'flight';
+var flightURL = 'https://docs.google.com/forms/d/e/1FAIpQLScihvgV1O2NOBEX1b6byjaqLV-TF-Lth90KMV1iORC8J0sTFg/viewform';
+var busURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdCwPcJgTAYyQR9ZnitRj2BsUwbTNlglSbXbTVOgVEa3UBANQ/viewform';
+
+function switchTab(type, btn) {
+  currentTab = type;
+  var pills = document.querySelectorAll('.tab-pill');
+  for (var i = 0; i < pills.length; i++) pills[i].classList.remove('active');
+  btn.classList.add('active');
+  var lblFrom = document.getElementById('lbl-from');
+  var lblTo = document.getElementById('lbl-to');
+  var extraWrap = document.getElementById('extra-wrap');
+  var bookBtn = document.getElementById('main-book-btn');
+  if (type === 'bus') {
+    if (lblFrom) lblFrom.textContent = 'Start Point';
+    if (lblTo) lblTo.textContent = 'Destination';
+    if (bookBtn) bookBtn.textContent = 'BOOK BUS NOW';
+    if (extraWrap) extraWrap.innerHTML = '<label>Mode of Transport</label><select id="inp-extra"><option value="">Select...</option><option>Tourist Bus</option><option>Deluxe Night Bus</option><option>Private Jeep (Scorpio)</option><option>Hiace</option><option>Private Car / SUV</option><option>Local Bus</option></select>';
+  } else {
+    if (lblFrom) lblFrom.textContent = 'Departure City';
+    if (lblTo) lblTo.textContent = 'Arrival City';
+    if (bookBtn) bookBtn.textContent = 'BOOK NOW';
+    if (extraWrap) extraWrap.innerHTML = '<label>Nationality</label><input list="nat-list" id="inp-extra" placeholder="e.g. Nepali" autocomplete="off"/>';
   }
+}
 
-  // PARALLAX
-  window.addEventListener('scroll',function(){
-    var bg=document.getElementById('hero-bg');
-    if(bg)bg.style.transform='translateY('+(window.pageYOffset*0.45)+'px)';
-  },{passive:true});
+function goToBooking() {
+  var url = currentTab === 'bus' ? busURL : flightURL;
+  window.open(url, '_blank');
+}
 
-  // MOBILE NAV
-  function toggleMobileNav(){document.getElementById('mobile-nav').classList.toggle('open');}
-  function closeMobileNav(){document.getElementById('mobile-nav').classList.remove('open');}
-  document.addEventListener('click',function(e){
-    var nav=document.getElementById('mobile-nav');
-    if(nav.classList.contains('open')&&!nav.contains(e.target)&&!e.target.closest('.nav-hamburger'))nav.classList.remove('open');
-  });
+// STAR RATING
+var currentRating = 0;
+function setRating(n) {
+  currentRating = n;
+  var stars = document.querySelectorAll('.star');
+  for (var i = 0; i < stars.length; i++) {
+    stars[i].style.opacity = i < n ? '1' : '0.3';
+    stars[i].style.color = i < n ? 'var(--gold2)' : '';
+  }
+}
+
+// FEEDBACK
+function submitFeedback() {
+  var name = document.getElementById('fb-name') ? document.getElementById('fb-name').value.trim() : '';
+  var contact = document.getElementById('fb-contact') ? document.getElementById('fb-contact').value.trim() : '';
+  var message = document.getElementById('fb-message') ? document.getElementById('fb-message').value.trim() : '';
+  if (!message) { alert('Please write your feedback before submitting.'); return; }
+  var stars = currentRating > 0 ? currentRating + '/5 stars' : 'No rating';
+  var text = 'Feedback from MATS website:%0A%0AName: ' + encodeURIComponent(name || 'Anonymous') +
+    '%0AContact: ' + encodeURIComponent(contact || 'Not provided') +
+    '%0ARating: ' + encodeURIComponent(stars) +
+    '%0A%0AFeedback:%0A' + encodeURIComponent(message);
+  window.open('https://wa.me/9779823356668?text=' + text, '_blank');
+  var success = document.getElementById('fb-success');
+  if (success) success.style.display = 'block';
+  if (document.getElementById('fb-name')) document.getElementById('fb-name').value = '';
+  if (document.getElementById('fb-contact')) document.getElementById('fb-contact').value = '';
+  if (document.getElementById('fb-message')) document.getElementById('fb-message').value = '';
+  setRating(0);
+}
+
+// PARALLAX
+window.addEventListener('scroll', function() {
+  var bg = document.getElementById('hero-bg');
+  if (bg) bg.style.transform = 'translateY(' + (window.pageYOffset * 0.45) + 'px)';
+}, {passive: true});
+
+// MOBILE NAV
+function toggleMobileNav() {
+  var nav = document.getElementById('mobile-nav');
+  if (nav) nav.classList.toggle('open');
+}
+function closeMobileNav() {
+  var nav = document.getElementById('mobile-nav');
+  if (nav) nav.classList.remove('open');
+}
+document.addEventListener('click', function(e) {
+  var nav = document.getElementById('mobile-nav');
+  if (nav && nav.classList.contains('open') && !nav.contains(e.target) && !e.target.closest('.nav-hamburger')) {
+    nav.classList.remove('open');
+  }
+});
 </script>
 </body>
 </html>
