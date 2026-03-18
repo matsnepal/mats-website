@@ -373,6 +373,32 @@
     .auth-google:hover{background:var(--cream);border-color:#aaa;}
     .auth-error{background:#fff5f5;border:1px solid #fecaca;border-radius:8px;padding:10px 14px;font-size:13px;color:var(--red);margin-bottom:16px;display:none;}
     .auth-success-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:600;z-index:4000;display:none;box-shadow:0 8px 24px rgba(26,92,58,0.3);}
+
+    /* AUTH MODAL */
+    .auth-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:3000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px);}
+    .auth-overlay.open{display:flex;}
+    .auth-box{background:#fff;border-radius:20px;width:100%;max-width:420px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);}
+    .auth-header{background:var(--navy);padding:24px 28px 20px;text-align:center;position:relative;}
+    .auth-logo{font-family:'Permanent Marker',cursive;font-size:28px;color:var(--gold2);letter-spacing:3px;}
+    .auth-subtitle{font-size:12px;color:rgba(255,255,255,0.5);margin-top:4px;}
+    .auth-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,0.1);border:none;color:rgba(255,255,255,0.7);width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;line-height:1;}
+    .auth-tabs{display:flex;border-bottom:1px solid var(--border);}
+    .auth-tab{flex:1;padding:13px;text-align:center;font-size:14px;font-weight:700;color:var(--muted);cursor:pointer;border:none;background:none;font-family:'DM Sans',sans-serif;transition:0.2s;border-bottom:2px solid transparent;margin-bottom:-1px;}
+    .auth-tab.active{color:var(--navy);border-bottom-color:var(--gold);}
+    .auth-body{padding:24px 28px;}
+    .auth-field{margin-bottom:14px;}
+    .auth-field label{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+    .auth-field input{width:100%;height:44px;padding:0 14px;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border 0.2s;box-sizing:border-box;}
+    .auth-field input:focus{border-color:var(--gold);}
+    .auth-submit{width:100%;height:46px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:0.2s;margin-top:4px;}
+    .auth-submit:hover{background:var(--green);}
+    .auth-divider{display:flex;align-items:center;gap:12px;margin:16px 0;}
+    .auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+    .auth-divider span{font-size:12px;color:var(--muted);font-weight:600;}
+    .auth-google{width:100%;height:44px;background:#fff;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:0.2s;}
+    .auth-google:hover{background:var(--cream);border-color:#aaa;}
+    .auth-error{background:#fff5f5;border:1px solid #fecaca;border-radius:8px;padding:10px 14px;font-size:13px;color:var(--red);margin-bottom:14px;display:none;line-height:1.5;}
+    .auth-success-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:600;z-index:4000;display:none;box-shadow:0 8px 24px rgba(26,92,58,0.3);white-space:nowrap;}
     /* WA FLOAT */
     .wa-float{position:fixed;bottom:24px;right:24px;z-index:999;width:58px;height:58px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,0.45);transition:0.2s;font-size:28px;}
     .wa-float:hover{transform:scale(1.1);}
@@ -507,15 +533,6 @@
   })();
 </script>
 
-<!-- DEV BANNER -->
-<div id="dev-banner" style="background:linear-gradient(90deg,var(--navy),#1a3a5c,var(--navy));border-bottom:1px solid rgba(200,146,42,0.3);padding:10px 20px;text-align:center;position:relative;z-index:1001;">
-  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
-    <span style="font-size:16px;">🚧</span>
-    <span style="font-size:13px;color:rgba(255,255,255,0.85);font-weight:500;letter-spacing:0.5px;">This website is currently under development — more features and content coming soon. Stay tuned!</span>
-    <a href="#contact" style="font-size:12px;color:var(--gold2);font-weight:700;text-decoration:none;border:1px solid rgba(200,146,42,0.4);padding:4px 12px;border-radius:20px;white-space:nowrap;transition:0.2s;" onmouseover="this.style.background='rgba(200,146,42,0.15)'" onmouseout="this.style.background='transparent'">Contact Us →</a>
-    <button onclick="document.getElementById('dev-banner').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.4);font-size:18px;cursor:pointer;line-height:1;padding:0 0 0 8px;" aria-label="Close banner">×</button>
-  </div>
-</div>
 
 <!-- NAVBAR -->
 <nav id="navbar" role="navigation" aria-label="Main navigation">
@@ -1248,6 +1265,13 @@
           </div>
         </div>
         <button onclick="submitFeedback()" style="background:var(--gold);color:var(--navy);border:none;border-radius:10px;padding:14px 28px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:0.2s;align-self:flex-start;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Send Feedback →</button>
+      <form id="formspree-feedback" action="https://formspree.io/f/mdawdwda" method="POST" style="display:none;">
+        <input type="hidden" name="name" id="fs-name"/>
+        <input type="hidden" name="contact" id="fs-contact"/>
+        <input type="hidden" name="rating" id="fs-rating"/>
+        <input type="text" name="_gotcha" style="display:none"/>
+        <textarea name="feedback" id="fs-feedback"></textarea>
+      </form>
         <div id="fb-success" style="display:none;background:rgba(26,92,58,0.2);border:1px solid rgba(26,92,58,0.4);border-radius:10px;padding:14px 18px;color:#6ee7b7;font-size:14px;font-weight:600;">✅ Thank you for your feedback! We really appreciate it.</div>
       </div>
     </div>
@@ -1397,6 +1421,48 @@
   </div>
 </div>
 
+<!-- AUTH MODAL -->
+<div class="auth-overlay" id="auth-modal" onclick="if(event.target===this)closeAuthModal()">
+  <div class="auth-box">
+    <div class="auth-header">
+      <div class="auth-logo">MATS</div>
+      <div class="auth-subtitle">Maitri Apartment & Travel Services</div>
+      <button class="auth-close" onclick="closeAuthModal()">✕</button>
+    </div>
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tab-login" onclick="switchAuthTab('login')">Sign In</button>
+      <button class="auth-tab" id="tab-signup" onclick="switchAuthTab('signup')">Create Account</button>
+    </div>
+    <div class="auth-body">
+      <div id="auth-error" class="auth-error"></div>
+      <div id="form-login">
+        <div class="auth-field"><label>Email Address</label><input type="email" id="login-email" placeholder="your@email.com"/></div>
+        <div class="auth-field"><label>Password</label><input type="password" id="login-password" placeholder="Your password"/></div>
+        <button class="auth-submit" onclick="matsSignIn()">Sign In to MATS</button>
+        <div class="auth-divider"><span>or</span></div>
+        <button class="auth-google" onclick="matsSignInGoogle()">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="20" height="20" alt="Google"/>
+          Continue with Google
+        </button>
+        <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:14px;">No account? <a href="javascript:void(0)" onclick="switchAuthTab('signup')" style="color:var(--green);font-weight:700;">Create one free</a></p>
+      </div>
+      <div id="form-signup" style="display:none;">
+        <div class="auth-field"><label>Full Name</label><input type="text" id="signup-name" placeholder="e.g. Ramesh Shrestha"/></div>
+        <div class="auth-field"><label>Email Address</label><input type="email" id="signup-email" placeholder="your@email.com"/></div>
+        <div class="auth-field"><label>Password</label><input type="password" id="signup-password" placeholder="Min 6 characters"/></div>
+        <button class="auth-submit" onclick="matsSignUp()">Create My Account</button>
+        <div class="auth-divider"><span>or</span></div>
+        <button class="auth-google" onclick="matsSignInGoogle()">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="20" height="20" alt="Google"/>
+          Sign up with Google
+        </button>
+        <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:14px;">Already have an account? <a href="javascript:void(0)" onclick="switchAuthTab('login')" style="color:var(--green);font-weight:700;">Sign in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auth-success-toast" id="auth-success-toast"></div>
+
 <a class="wa-float" href="https://wa.me/9779823356668" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 
 <script>
@@ -1527,22 +1593,31 @@ function setRating(n) {
 
 // FEEDBACK
 function submitFeedback() {
-  var name = document.getElementById('fb-name') ? document.getElementById('fb-name').value.trim() : '';
-  var contact = document.getElementById('fb-contact') ? document.getElementById('fb-contact').value.trim() : '';
-  var message = document.getElementById('fb-message') ? document.getElementById('fb-message').value.trim() : '';
-  if (!message) { alert('Please write your feedback before submitting.'); return; }
+  var name = (document.getElementById('fb-name') || {}).value || '';
+  var contact = (document.getElementById('fb-contact') || {}).value || '';
+  var message = (document.getElementById('fb-message') || {}).value || '';
+  if (!message.trim()) { alert('Please write your feedback before submitting.'); return; }
   var stars = currentRating > 0 ? currentRating + '/5 stars' : 'No rating';
-  var text = 'Feedback from MATS website:%0A%0AName: ' + encodeURIComponent(name || 'Anonymous') +
-    '%0AContact: ' + encodeURIComponent(contact || 'Not provided') +
-    '%0ARating: ' + encodeURIComponent(stars) +
-    '%0A%0AFeedback:%0A' + encodeURIComponent(message);
-  window.open('https://wa.me/9779823356668?text=' + text, '_blank');
-  var success = document.getElementById('fb-success');
-  if (success) success.style.display = 'block';
-  if (document.getElementById('fb-name')) document.getElementById('fb-name').value = '';
-  if (document.getElementById('fb-contact')) document.getElementById('fb-contact').value = '';
-  if (document.getElementById('fb-message')) document.getElementById('fb-message').value = '';
-  setRating(0);
+  // Fill hidden Formspree form
+  document.getElementById('fs-name').value = name || 'Anonymous';
+  document.getElementById('fs-contact').value = contact || 'Not provided';
+  document.getElementById('fs-rating').value = stars;
+  document.getElementById('fs-feedback').value = message;
+  // Submit via fetch
+  var form = document.getElementById('formspree-feedback');
+  var data = new FormData(form);
+  fetch('https://formspree.io/f/mdawdwda', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+    .then(function(r) {
+      if (r.ok) {
+        var success = document.getElementById('fb-success');
+        if (success) success.style.display = 'block';
+        document.getElementById('fb-name').value = '';
+        document.getElementById('fb-contact').value = '';
+        document.getElementById('fb-message').value = '';
+        setRating(0);
+      } else { alert('Something went wrong. Please try again.'); }
+    })
+    .catch(function() { alert('Network error. Please try again.'); });
 }
 
 // PARALLAX
@@ -1550,6 +1625,28 @@ window.addEventListener('scroll', function() {
   var bg = document.getElementById('hero-bg');
   if (bg) bg.style.transform = 'translateY(' + (window.pageYOffset * 0.45) + 'px)';
 }, {passive: true});
+
+
+// AUTH WRAPPERS - called from HTML buttons
+function matsSignIn() {
+  var email = document.getElementById('login-email').value;
+  var pass = document.getElementById('login-password').value;
+  if (!email || !pass) { showAuthError('Please enter your email and password.'); return; }
+  if (window.matsAuth) { window.matsAuth.signIn(email, pass); }
+  else { showAuthError('Authentication loading, please try again in a moment.'); }
+}
+function matsSignUp() {
+  var name = document.getElementById('signup-name').value;
+  var email = document.getElementById('signup-email').value;
+  var pass = document.getElementById('signup-password').value;
+  if (!name || !email || !pass) { showAuthError('Please fill in all fields.'); return; }
+  if (window.matsAuth) { window.matsAuth.signUp(name, email, pass); }
+  else { showAuthError('Authentication loading, please try again in a moment.'); }
+}
+function matsSignInGoogle() {
+  if (window.matsAuth) { window.matsAuth.signInGoogle(); }
+  else { showAuthError('Authentication loading, please try again in a moment.'); }
+}
 
 // AUTH MODAL
 function openAuthModal(tab) {
