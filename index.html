@@ -105,7 +105,7 @@
     .hero-contacts a:hover{color:var(--gold2);}
 
     /* SECTIONS */
-    section{padding:88px 24px;}
+    section{padding:64px 24px;}
     .section-inner{max-width:1100px;margin:0 auto;}
     .section-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
     .section-eyebrow::before{content:'';width:28px;height:2px;background:var(--gold);border-radius:2px;}
@@ -347,6 +347,32 @@
     .modal-body ul{padding-left:20px;}
     .modal-body ul li{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:6px;}
 
+
+    /* AUTH MODAL */
+    .auth-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:3000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px);}
+    .auth-overlay.open{display:flex;}
+    .auth-box{background:#fff;border-radius:20px;width:100%;max-width:420px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);}
+    .auth-header{background:var(--navy);padding:28px 32px 24px;text-align:center;position:relative;}
+    .auth-logo{font-family:'Permanent Marker',cursive;font-size:32px;color:var(--gold2);letter-spacing:3px;}
+    .auth-subtitle{font-size:13px;color:rgba(255,255,255,0.55);margin-top:4px;}
+    .auth-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.1);border:none;color:rgba(255,255,255,0.6);width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;}
+    .auth-tabs{display:flex;border-bottom:1px solid var(--border);}
+    .auth-tab{flex:1;padding:14px;text-align:center;font-size:14px;font-weight:700;color:var(--muted);cursor:pointer;border:none;background:none;font-family:'DM Sans',sans-serif;transition:0.2s;border-bottom:2px solid transparent;margin-bottom:-1px;}
+    .auth-tab.active{color:var(--navy);border-bottom-color:var(--gold);}
+    .auth-body{padding:28px 32px;}
+    .auth-field{margin-bottom:16px;}
+    .auth-field label{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:7px;}
+    .auth-field input{width:100%;height:46px;padding:0 14px;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border 0.2s;}
+    .auth-field input:focus{border-color:var(--gold);}
+    .auth-submit{width:100%;height:48px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:0.2s;margin-top:4px;}
+    .auth-submit:hover{background:var(--green);}
+    .auth-divider{display:flex;align-items:center;gap:12px;margin:20px 0;}
+    .auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+    .auth-divider span{font-size:12px;color:var(--muted);font-weight:600;}
+    .auth-google{width:100%;height:46px;background:#fff;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:0.2s;}
+    .auth-google:hover{background:var(--cream);border-color:#aaa;}
+    .auth-error{background:#fff5f5;border:1px solid #fecaca;border-radius:8px;padding:10px 14px;font-size:13px;color:var(--red);margin-bottom:16px;display:none;}
+    .auth-success-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:600;z-index:4000;display:none;box-shadow:0 8px 24px rgba(26,92,58,0.3);}
     /* WA FLOAT */
     .wa-float{position:fixed;bottom:24px;right:24px;z-index:999;width:58px;height:58px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,0.45);transition:0.2s;font-size:28px;}
     .wa-float:hover{transform:scale(1.1);}
@@ -363,6 +389,77 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-9BWDFNBFXP');
+  </script>
+
+  <!-- Firebase Auth -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, updateProfile } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCjXO1hnN7Hi08ptnZfr4kp3m-dsnBP4u0",
+      authDomain: "mats-67b49.firebaseapp.com",
+      projectId: "mats-67b49",
+      storageBucket: "mats-67b49.firebasestorage.app",
+      messagingSenderId: "478672907679",
+      appId: "1:478672907679:web:37bf22c406af54b04321aa"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const googleProvider = new GoogleAuthProvider();
+
+    // Auth state listener
+    onAuthStateChanged(auth, function(user) {
+      var loginBtn = document.getElementById('nav-login-btn');
+      var userMenu = document.getElementById('nav-user-menu');
+      var userName = document.getElementById('nav-user-name');
+      if (user) {
+        if (loginBtn) loginBtn.style.display = 'none';
+        if (userMenu) userMenu.style.display = 'flex';
+        if (userName) userName.textContent = user.displayName || user.email.split('@')[0];
+      } else {
+        if (loginBtn) loginBtn.style.display = 'flex';
+        if (userMenu) userMenu.style.display = 'none';
+      }
+    });
+
+    // Expose functions to window
+    window.matsAuth = {
+      signUp: async function(name, email, password) {
+        try {
+          var cred = await createUserWithEmailAndPassword(auth, email, password);
+          await updateProfile(cred.user, { displayName: name });
+          closeAuthModal();
+          showAuthSuccess('Welcome to MATS, ' + name + '! 🎉');
+        } catch(e) {
+          showAuthError(e.message);
+        }
+      },
+      signIn: async function(email, password) {
+        try {
+          await signInWithEmailAndPassword(auth, email, password);
+          closeAuthModal();
+          showAuthSuccess('Welcome back! 🙏');
+        } catch(e) {
+          showAuthError(e.message);
+        }
+      },
+      signInGoogle: async function() {
+        try {
+          await signInWithPopup(auth, googleProvider);
+          closeAuthModal();
+          showAuthSuccess('Signed in with Google! 🙏');
+        } catch(e) {
+          showAuthError(e.message);
+        }
+      },
+      signOut: async function() {
+        await signOut(auth);
+        var dd = document.getElementById('user-dropdown');
+        if (dd) dd.style.display = 'none';
+      }
+    };
   </script>
 </head>
 <body>
@@ -452,6 +549,7 @@
   <a href="#feedback" onclick="closeMobileNav()">Feedback</a>
   <a href="#contact" onclick="closeMobileNav()">Contact</a>
   <a href="#booking" onclick="closeMobileNav()" style="color:var(--gold2);font-weight:700;">✈ Book Now</a>
+  <a href="javascript:void(0)" onclick="closeMobileNav();openAuthModal('login')" style="color:#fff;font-weight:600;">👤 Login / Sign Up</a>
 </div>
 
 <!-- HERO -->
@@ -463,6 +561,12 @@
     <h1 class="hero-mats">M<span>A</span>TS</h1>
     <p class="hero-tagline">Discover Nepal – Stay, Explore, Experience</p>
     <p class="hero-sub">Mitrapark-7, Kathmandu &nbsp;·&nbsp; Licensed Travel Agency</p>
+    <a href="https://www.google.com/maps/place/MATS+-+Maitri+Apartment+and+Travel+Services+Pvt+Ltd" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:6px 16px;margin-bottom:24px;text-decoration:none;transition:0.2s;backdrop-filter:blur(4px);" onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+      <span style="color:#fbbf24;font-size:14px;letter-spacing:1px;">★★★★★</span>
+      <span style="font-size:13px;color:#fff;font-weight:700;">5.0</span>
+      <span style="font-size:12px;color:rgba(255,255,255,0.6);">· 3 Google Reviews</span>
+      <span style="font-size:11px;color:rgba(255,255,255,0.4);">↗</span>
+    </a>
     <p style="font-family:'Playfair Display',serif;font-size:clamp(15px,2.5vw,20px);color:rgba(255,255,255,0.75);margin-bottom:8px;letter-spacing:0.5px;text-shadow:0 2px 10px rgba(0,0,0,0.4);animation:heroFadeUp 1s ease 0.25s both;">पारिवारिक आनन्द प्रकृतीको साथमा</p>
     <div style="margin-bottom:24px;">
       <div class="hero-search-wrap">
@@ -471,6 +575,14 @@
         <button class="hero-search-btn" onclick="doSearch(document.getElementById('hero-search').value)">Search</button>
       </div>
       <div id="search-results"></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:20px;">
+      <span style="font-size:12px;color:rgba(255,255,255,0.4);align-self:center;letter-spacing:1px;text-transform:uppercase;">Popular:</span>
+      <button onclick="doSearch('flight');document.getElementById('hero-search').value='flight'" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">✈ Flight Booking</button>
+      <button onclick="doSearch('pokhara');document.getElementById('hero-search').value='Pokhara'" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">🏔 Pokhara</button>
+      <button onclick="doSearch('bus');document.getElementById('hero-search').value='bus'" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">🚌 Bus Tickets</button>
+      <button onclick="doSearch('pilgrimage');document.getElementById('hero-search').value='pilgrimage'" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">🙏 Pilgrimage Tours</button>
+      <button onclick="doSearch('apartment');document.getElementById('hero-search').value='apartment'" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">🏠 Stay</button>
     </div>
     <div class="booking-wrap" id="booking">
       <div class="booking-tabs-row">
@@ -565,6 +677,11 @@
   </div>
 </section>
 
+<div style="line-height:0;overflow:hidden;background:var(--cream);">
+  <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:40px;display:block;">
+    <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="var(--navy)"/>
+  </svg>
+</div>
 <!-- MISSION & VISION -->
 <section id="mission" aria-labelledby="mission-title">
   <div class="section-inner">
@@ -889,7 +1006,7 @@
 
 
 <!-- VIDEOS & TIKTOK -->
-<section id="videos" style="background:var(--navy);padding:88px 24px;">
+<section id="videos" style="background:var(--navy);padding:64px 24px;">
   <div class="section-inner">
     <div class="section-eyebrow" style="color:var(--gold);">Nepal on Video</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;">See Nepal Through Our Lens</h2>
@@ -1039,7 +1156,7 @@
 
 
 <!-- JOIN OUR TEAM -->
-<section id="careers" style="background:var(--cream);padding:88px 24px;">
+<section id="careers" style="background:var(--cream);padding:64px 24px;">
   <div class="section-inner">
     <div class="section-eyebrow">Careers</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:var(--text);line-height:1.15;margin-bottom:16px;">Join Our Team</h2>
@@ -1074,7 +1191,7 @@
 </section>
 
 <!-- FEEDBACK -->
-<section id="feedback" style="background:var(--navy);padding:88px 24px;">
+<section id="feedback" style="background:var(--navy);padding:64px 24px;">
   <div class="section-inner" style="max-width:700px;">
     <div class="section-eyebrow" style="color:var(--gold);">Your Voice Matters</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;">Share Your Feedback</h2>
@@ -1126,6 +1243,10 @@
           <div class="contact-card"><div class="cc-icon cc-loc">📍</div><div><div class="cc-label">Office</div><div class="cc-value">Mitrapark-7, Kathmandu, Nepal</div></div></div>
           <div class="contact-card"><div class="cc-icon cc-loc">🕐</div><div><div class="cc-label">Office Hours</div><div class="cc-value">Sunday–Friday: 9:00 AM – 6:00 PM</div></div></div>
           <div class="contact-card"><div class="cc-icon cc-tt">🎵</div><div><div class="cc-label">TikTok</div><div class="cc-value"><a href="https://www.tiktok.com/@matsnepal" target="_blank" rel="noopener">@matsnepal</a></div></div></div>
+          <div class="contact-card" style="background:rgba(24,119,242,0.04);border-color:rgba(24,119,242,0.15);"><div class="cc-icon" style="background:rgba(24,119,242,0.12);">📘</div><div><div class="cc-label">Facebook</div><div class="cc-value"><a href="https://www.facebook.com/matsnepal" target="_blank" rel="noopener">facebook.com/matsnepal</a></div></div></div>
+          <div class="contact-card" style="background:rgba(225,48,108,0.04);border-color:rgba(225,48,108,0.15);"><div class="cc-icon" style="background:rgba(225,48,108,0.12);">📷</div><div><div class="cc-label">Instagram</div><div class="cc-value"><a href="https://www.instagram.com/matsnepal/" target="_blank" rel="noopener">@matsnepal</a></div></div></div>
+          <div class="contact-card" style="background:rgba(255,0,0,0.04);border-color:rgba(255,0,0,0.15);"><div class="cc-icon" style="background:rgba(255,0,0,0.1);">▶</div><div><div class="cc-label">YouTube</div><div class="cc-value"><a href="https://youtube.com/@matsnepal" target="_blank" rel="noopener">@matsnepal</a></div></div></div>
+          <div class="contact-card" style="background:rgba(10,102,194,0.04);border-color:rgba(10,102,194,0.15);"><div class="cc-icon" style="background:rgba(10,102,194,0.12);">💼</div><div><div class="cc-label">LinkedIn</div><div class="cc-value"><a href="https://www.linkedin.com/company/matsnepal/" target="_blank" rel="noopener">MATS Nepal</a></div></div></div>
         </div>
         <div class="contact-btns">
           <a class="cbtn cbtn-wa" href="https://wa.me/9779823356668" target="_blank" rel="noopener">💬 WhatsApp</a>
@@ -1153,8 +1274,12 @@
           </div>
         </div>
         <p class="footer-desc">A licensed Nepal travel agency offering domestic & international flight tickets, bus transport, tour packages, short-term stays and Nepal tourism promotion. Based in Mitrapark-7, Kathmandu. Est. 2081 BS / 2024 AD.</p>
-        <div class="footer-socials">
-          <a class="fsoc fsoc-tt" href="https://www.tiktok.com/@matsnepal" target="_blank" rel="noopener">🎵 @matsnepal</a>
+        <div class="footer-socials" style="display:flex;flex-wrap:wrap;gap:8px;">
+          <a class="fsoc" href="https://www.facebook.com/matsnepal" target="_blank" rel="noopener" style="background:rgba(24,119,242,0.12);color:#4f93f5;border:1px solid rgba(24,119,242,0.2);">📘 Facebook</a>
+          <a class="fsoc" href="https://www.instagram.com/matsnepal/" target="_blank" rel="noopener" style="background:rgba(225,48,108,0.12);color:#f06292;border:1px solid rgba(225,48,108,0.2);">📷 Instagram</a>
+          <a class="fsoc fsoc-tt" href="https://www.tiktok.com/@matsnepal" target="_blank" rel="noopener">🎵 TikTok</a>
+          <a class="fsoc" href="https://youtube.com/@matsnepal" target="_blank" rel="noopener" style="background:rgba(255,0,0,0.12);color:#ff6b6b;border:1px solid rgba(255,0,0,0.2);">▶ YouTube</a>
+          <a class="fsoc" href="https://www.linkedin.com/company/matsnepal/" target="_blank" rel="noopener" style="background:rgba(10,102,194,0.12);color:#5ba3d9;border:1px solid rgba(10,102,194,0.2);">💼 LinkedIn</a>
           <a class="fsoc fsoc-wa" href="https://wa.me/9779823356668" target="_blank" rel="noopener">💬 WhatsApp</a>
         </div>
       </div>
@@ -1400,6 +1525,44 @@ window.addEventListener('scroll', function() {
   if (bg) bg.style.transform = 'translateY(' + (window.pageYOffset * 0.45) + 'px)';
 }, {passive: true});
 
+// AUTH MODAL
+function openAuthModal(tab) {
+  document.getElementById('auth-modal').classList.add('open');
+  switchAuthTab(tab || 'login');
+  document.getElementById('auth-error').style.display = 'none';
+}
+function closeAuthModal() {
+  document.getElementById('auth-modal').classList.remove('open');
+}
+function switchAuthTab(tab) {
+  document.getElementById('form-login').style.display = tab === 'login' ? 'block' : 'none';
+  document.getElementById('form-signup').style.display = tab === 'signup' ? 'block' : 'none';
+  document.getElementById('tab-login').classList.toggle('active', tab === 'login');
+  document.getElementById('tab-signup').classList.toggle('active', tab === 'signup');
+  document.getElementById('auth-error').style.display = 'none';
+}
+function showAuthError(msg) {
+  var el = document.getElementById('auth-error');
+  if (el) { el.textContent = msg.replace('Firebase: ', '').replace(' (auth/invalid-credential).', ' — please check your email and password.').replace('(auth/email-already-in-use).', '— this email is already registered. Try signing in instead.').replace('(auth/weak-password)', '— password must be at least 6 characters.'); el.style.display = 'block'; }
+}
+function showAuthSuccess(msg) {
+  var toast = document.getElementById('auth-success-toast');
+  if (toast) { toast.textContent = msg; toast.style.display = 'block'; setTimeout(function(){ toast.style.display = 'none'; }, 3000); }
+}
+function toggleUserDropdown() {
+  var dd = document.getElementById('user-dropdown');
+  var dn = document.getElementById('dropdown-name');
+  var un = document.getElementById('nav-user-name');
+  if (dd) { dd.style.display = dd.style.display === 'none' ? 'block' : 'none'; }
+  if (dn && un) dn.textContent = un.textContent;
+}
+document.addEventListener('click', function(e) {
+  var dd = document.getElementById('user-dropdown');
+  if (dd && dd.style.display === 'block' && !e.target.closest('#nav-user-menu')) {
+    dd.style.display = 'none';
+  }
+});
+
 // MOBILE NAV
 function toggleMobileNav() {
   var nav = document.getElementById('mobile-nav');
@@ -1415,8 +1578,6 @@ document.addEventListener('click', function(e) {
     nav.classList.remove('open');
   }
 });
-</script>
-
 </script>
 </body>
 </html>
