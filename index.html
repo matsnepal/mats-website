@@ -998,6 +998,277 @@
   </div>
 </section>
 
+<!-- STAY -->
+<section id="stay" aria-labelledby="stay-title" style="background:#fff;padding:48px 24px;">
+  <div class="section-inner">
+    <div class="section-eyebrow">Partner Accommodation</div>
+    <h2 class="section-title" id="stay-title">Places to Stay in Kathmandu</h2>
+    <p class="section-sub">Self-service Airbnb-style stays — arrive, settle in, feel at home. No room service, shared kitchen access. Perfect for travellers, professionals and families.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:32px;">
+
+      <!-- APT 1: Studio - Big Room -->
+      <div style="background:var(--cream);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="height:180px;background:linear-gradient(135deg,var(--navy2),#0d2d4a);display:flex;align-items:center;justify-content:center;position:relative;">
+          <!-- REPLACE: <img src="studio-room.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Studio Big Room Mitrapark"/> -->
+          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🛏️</div><div style="font-size:11px;margin-top:6px;">Add your photo</div></div>
+          <div style="position:absolute;top:10px;left:10px;"><span id="avail-studio-big" style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">● Unavailable</span></div>
+          <div style="position:absolute;top:10px;right:10px;cursor:pointer;" onclick="toggleAvail('studio-big')" title="Toggle availability (admin only)"><span style="background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.6);font-size:10px;padding:3px 8px;border-radius:10px;">⚙</span></div>
+        </div>
+        <div style="padding:18px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text);">Studio — Big Room</div>
+            <div style="text-align:right;"><div style="font-size:16px;font-weight:700;color:var(--green);">NPR 2,000</div><div style="font-size:10px;color:var(--muted);">per night</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px;"><span style="color:#fbbf24;font-size:12px;">★★★★★</span><span style="font-size:11px;color:var(--muted);">4.6</span></div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">📍 Mitrapark-7, Kathmandu · Near Airport</div>
+          <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;">Private furnished room in a 2-room flat. Shared kitchen access. Suitable for solo travellers, professionals and short stays.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🛋️ Furnished</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🍳 Shared Kitchen</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🚿 Private Bath</span>
+          </div>
+          <div style="background:#fff3e0;border:1px solid #fcd34d;border-radius:8px;padding:8px 12px;font-size:11px;color:#92400e;margin-bottom:14px;line-height:1.5;">⚠️ Self-service only. No room service provided. Guests are expected to maintain cleanliness. Suitable for respectful, responsible stays.</div>
+          <div style="display:flex;gap:8px;">
+            <button onclick="checkAvailability('studio-big','Studio Big Room')" style="flex:1;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Check Availability</button>
+            <a href="#contact" style="flex:1;background:var(--gold);color:var(--navy);border-radius:8px;padding:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;transition:0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- APT 2: Studio - Small Room -->
+      <div style="background:var(--cream);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="height:180px;background:linear-gradient(135deg,#1a3a2a,#0d2137);display:flex;align-items:center;justify-content:center;position:relative;">
+          <!-- REPLACE: <img src="studio-small.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Studio Small Room Mitrapark"/> -->
+          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🛏️</div><div style="font-size:11px;margin-top:6px;">Add your photo</div></div>
+          <div style="position:absolute;top:10px;left:10px;"><span id="avail-studio-small" style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">● Unavailable</span></div>
+          <div style="position:absolute;top:10px;right:10px;cursor:pointer;" onclick="toggleAvail('studio-small')" title="Toggle availability (admin only)"><span style="background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.6);font-size:10px;padding:3px 8px;border-radius:10px;">⚙</span></div>
+        </div>
+        <div style="padding:18px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text);">Studio — Small Room</div>
+            <div style="text-align:right;"><div style="font-size:16px;font-weight:700;color:var(--green);">NPR 1,000</div><div style="font-size:10px;color:var(--muted);">per night</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px;"><span style="color:#fbbf24;font-size:12px;">★★★★★</span><span style="font-size:11px;color:var(--muted);">4.6</span></div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">📍 Mitrapark-7, Kathmandu · Near Airport</div>
+          <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;">Compact private room in same flat as big room. Book both rooms together for NPR 2,500/night. Shared kitchen access.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🛋️ Furnished</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🍳 Shared Kitchen</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">💡 Both rooms: NPR 2,500</span>
+          </div>
+          <div style="background:#fff3e0;border:1px solid #fcd34d;border-radius:8px;padding:8px 12px;font-size:11px;color:#92400e;margin-bottom:14px;line-height:1.5;">⚠️ Self-service only. No room service provided. Guests are expected to maintain cleanliness. Suitable for respectful, responsible stays.</div>
+          <div style="display:flex;gap:8px;">
+            <button onclick="checkAvailability('studio-small','Studio Small Room')" style="flex:1;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Check Availability</button>
+            <a href="#contact" style="flex:1;background:var(--gold);color:var(--navy);border-radius:8px;padding:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;transition:0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- APT 3: Shared Hall -->
+      <div style="background:var(--cream);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="height:180px;background:linear-gradient(135deg,#1a1a3a,#0d1a37);display:flex;align-items:center;justify-content:center;position:relative;">
+          <!-- REPLACE: <img src="shared-hall.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Shared Room Hall Mitrapark"/> -->
+          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🛏️</div><div style="font-size:11px;margin-top:6px;">Add your photo</div></div>
+          <div style="position:absolute;top:10px;left:10px;"><span id="avail-shared-hall" style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">● Unavailable</span></div>
+          <div style="position:absolute;top:10px;right:10px;cursor:pointer;" onclick="toggleAvail('shared-hall')" title="Toggle availability (admin only)"><span style="background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.6);font-size:10px;padding:3px 8px;border-radius:10px;">⚙</span></div>
+        </div>
+        <div style="padding:18px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text);">Shared Room — 4 Beds</div>
+            <div style="text-align:right;"><div style="font-size:16px;font-weight:700;color:var(--green);">NPR 3,000</div><div style="font-size:10px;color:var(--muted);">per night</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px;"><span style="color:#fbbf24;font-size:12px;">★★★★★</span><span style="font-size:11px;color:var(--muted);">4.6</span></div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">📍 Mitrapark-7, Kathmandu · Near Airport</div>
+          <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;">Spacious open room with 2 double beds and 2 single beds. Private bathroom. Shared kitchen. Great for groups, families or travellers in transit.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🛏️ 4 Beds</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🍳 Shared Kitchen</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">👨‍👩‍👧 Family Friendly</span>
+          </div>
+          <div style="background:#fff3e0;border:1px solid #fcd34d;border-radius:8px;padding:8px 12px;font-size:11px;color:#92400e;margin-bottom:14px;line-height:1.5;">⚠️ Self-service only. No room service provided. Guests are expected to maintain cleanliness. Suitable for respectful, responsible stays.</div>
+          <div style="display:flex;gap:8px;">
+            <button onclick="checkAvailability('shared-hall','Shared Room — 4 Beds')" style="flex:1;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Check Availability</button>
+            <a href="#contact" style="flex:1;background:var(--gold);color:var(--navy);border-radius:8px;padding:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;transition:0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- APT 4: Buddhanagar Rooftop -->
+      <div style="background:var(--cream);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="height:180px;background:linear-gradient(135deg,#2d1a3a,#1a0d37);display:flex;align-items:center;justify-content:center;position:relative;">
+          <!-- REPLACE: <img src="buddhanagar-rooftop.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Rooftop Stay Buddhanagar Kathmandu"/> -->
+          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🌄</div><div style="font-size:11px;margin-top:6px;">Add your photo</div></div>
+          <div style="position:absolute;top:10px;left:10px;"><span id="avail-buddhanagar" style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">● Unavailable</span></div>
+          <div style="position:absolute;top:10px;right:10px;cursor:pointer;" onclick="toggleAvail('buddhanagar')" title="Toggle availability (admin only)"><span style="background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.6);font-size:10px;padding:3px 8px;border-radius:10px;">⚙</span></div>
+        </div>
+        <div style="padding:18px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text);">Rooftop Stay — Buddhanagar</div>
+            <div style="text-align:right;"><div style="font-size:16px;font-weight:700;color:var(--green);">NPR 4,000</div><div style="font-size:10px;color:var(--muted);">per night</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px;"><span style="color:#fbbf24;font-size:12px;">★★★★★</span><span style="font-size:11px;color:var(--muted);">4.9</span></div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">📍 Buddhanagar, Kathmandu · Near Int'l Buddhist Meditation Center</div>
+          <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;">Rooftop property with 2 rooms, kitchen and toilet. Peaceful, quiet location — ideal for meditation retreats, focused study or a calm city stay.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🌄 Rooftop</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🍳 Kitchen</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🧘 Quiet & Peaceful</span>
+          </div>
+          <div style="background:#fff3e0;border:1px solid #fcd34d;border-radius:8px;padding:8px 12px;font-size:11px;color:#92400e;margin-bottom:14px;line-height:1.5;">⚠️ Self-service only. No room service provided. Guests are expected to maintain cleanliness. Suitable for respectful, responsible stays.</div>
+          <div style="display:flex;gap:8px;">
+            <button onclick="checkAvailability('buddhanagar','Rooftop Stay Buddhanagar')" style="flex:1;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Check Availability</button>
+            <a href="#contact" style="flex:1;background:var(--gold);color:var(--navy);border-radius:8px;padding:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;transition:0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="margin-top:20px;padding:14px 18px;background:#f0f7f3;border-radius:10px;border-left:3px solid var(--green);font-size:13px;color:var(--muted);text-align:center;line-height:1.7;">
+      📌 MATS acts as a booking facilitator for these properties. All stays are self-service — no room service or food provided. Shared kitchen available. <a href="#contact" style="color:var(--green);font-weight:700;">Contact us to confirm availability →</a>
+    </div>
+  </div>
+</section>
+<!-- WHY CHOOSE MATS -->
+<section id="why" aria-labelledby="why-title">
+  <div class="section-inner">
+    <div class="section-eyebrow">Why Choose MATS</div>
+    <h2 class="section-title" id="why-title">Travel with Confidence</h2>
+    <p class="section-sub">We are a licensed, registered agency — not just a social media page. Here is what sets us apart.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🏛️</div>
+        <div class="why-title">Officially Licensed</div>
+        <div class="why-desc">Travel Agency Licence No. 4593/082/083. Registered Private Limited Company under the laws of Nepal.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💬</div>
+        <div class="why-title">WhatsApp-First Service</div>
+        <div class="why-desc">We respond within 1–2 hours on WhatsApp. Real people, not bots. Your ticket confirmed and sent directly to you.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">✈️</div>
+        <div class="why-title">All Airlines, One Place</div>
+        <div class="why-desc">Domestic and international flights. We search across all available airlines to find you the best fare and schedule.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💳</div>
+        <div class="why-title">Flexible Payment</div>
+        <div class="why-desc">eSewa, Khalti, bank transfer or cash — pay the way that works for you. Simple, transparent pricing.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <div class="why-title">Maitri — Friendship</div>
+        <div class="why-desc">Our name says it all. We treat every customer like a friend — honest advice, fair prices, genuine care.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📍</div>
+        <div class="why-title">Local Kathmandu Knowledge</div>
+        <div class="why-desc">Based in Mitrapark-7, Kathmandu. We know Nepal — and we are here to help you navigate it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section id="mission" aria-labelledby="mission-title">
+  <div class="section-inner">
+    <div class="section-eyebrow" style="color:var(--gold);justify-content:center;">Our Purpose</div>
+    <h2 class="section-title" id="mission-title" style="color:#fff;text-align:center;">Why MATS Exists</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.55);margin:0 auto;text-align:center;">The name <em>Maitri</em> means friendship in Sanskrit. Everything we do is built on that foundation — warm, honest, reliable service for every traveller.</p>
+    <div class="mv-grid">
+      <div class="mv-card">
+        <div class="mv-icon">🚀</div>
+        <div class="mv-label">Our Mission</div>
+        <div class="mv-title">Building a Brand You Come Back To</div>
+        <div class="mv-text">To build a trusted brand that inspires repeat travel by managing the necessary infrastructure for travel and hospitality — making every journey smooth, reliable and worth repeating.</div>
+      </div>
+      <div class="mv-card">
+        <div class="mv-icon">🌄</div>
+        <div class="mv-label">Our Vision</div>
+        <div class="mv-title">Nepal, Experienced Deeply</div>
+        <div class="mv-text">To provide customer-centric, organised accommodation, travel and hospitality services for those who wish to learn about Nepal's culture and traditions and explore its natural beauty.</div>
+      </div>
+    </div>
+    <div style="margin-top:32px;background:rgba(255,255,255,0.04);border:1px solid rgba(200,146,42,0.15);border-radius:16px;padding:28px 36px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--green2));"></div>
+      <p style="font-family:'Playfair Display',serif;font-size:clamp(14px,2vw,18px);color:rgba(255,255,255,0.8);line-height:1.9;text-align:center;font-style:italic;">
+        "सुरक्षित एवं आरामदायी वसोवासको साथमा नेपालको संस्कृती, परम्परा,<br/>प्राकृतिक मनमोहक दृश्यहरुको अवलोकन गर्ने अवसर"
+      </p>
+      <p style="text-align:center;font-size:13px;color:rgba(255,255,255,0.35);margin-top:12px;letter-spacing:2px;text-transform:uppercase;">Maitri Apartment & Travel Services Pvt. Ltd.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" aria-labelledby="testi-title" style="background:var(--navy);padding:48px 24px;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-20px;left:30px;font-family:'Playfair Display',serif;font-size:200px;color:rgba(200,146,42,0.05);line-height:1;pointer-events:none;">"</div>
+  <div class="section-inner">
+    <div class="section-eyebrow" style="color:var(--gold);">What Travellers Say</div>
+    <h2 class="section-title" id="testi-title" style="color:#fff;">Trusted by Nepal Travellers</h2>
+    <div class="testi-grid" style="margin-top:32px;">
+      <div class="testi-card">
+        <div style="display:flex;align-items:center;gap:4px;margin-bottom:10px;"><span style="color:#fbbf24;font-size:13px;">★★★★★</span><span style="font-size:12px;color:rgba(255,255,255,0.4);margin-left:4px;">4.9/5</span></div>
+        <p class="testi-text">"Booked a domestic flight Kathmandu to Pokhara through MATS. Got confirmation on WhatsApp within 45 minutes and the e-ticket came straight to my phone. Super smooth — will use again."</p>
+        <div class="testi-author"><div class="testi-avatar">R</div><div><div class="testi-name">Rajesh Sharma</div><div class="testi-role">Kathmandu → Pokhara · Domestic Flight</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div style="display:flex;align-items:center;gap:4px;margin-bottom:10px;"><span style="color:#fbbf24;font-size:13px;">★★★★★</span><span style="font-size:12px;color:rgba(255,255,255,0.4);margin-left:4px;">5.0/5</span></div>
+        <p class="testi-text">"Took my family on the Char Ganesh pilgrimage through MATS. The vehicle was comfortable, all four temples covered in one day, and the guide was very knowledgeable. My parents were very happy."</p>
+        <div class="testi-author"><div class="testi-avatar">S</div><div><div class="testi-name">Sunita Pradhan</div><div class="testi-role">Kathmandu · Char Ganesh Pilgrimage Tour</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div style="display:flex;align-items:center;gap:4px;margin-bottom:10px;"><span style="color:#fbbf24;font-size:13px;">★★★★½</span><span style="font-size:12px;color:rgba(255,255,255,0.4);margin-left:4px;">4.7/5</span></div>
+        <p class="testi-text">"Got bus tickets Kathmandu to Chitwan within an hour of contacting them. Price was fair and they kept me updated throughout. Maitri really means friendship — that is exactly how it felt."</p>
+        <div class="testi-author"><div class="testi-avatar">B</div><div><div class="testi-name">Bikash Thapa</div><div class="testi-role">Kathmandu → Chitwan · Bus Booking</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- VIDEOS & TIKTOK -->
+<section id="videos" style="background:var(--navy);padding:48px 24px;">
+  <div class="section-inner">
+    <div class="section-eyebrow" style="color:var(--gold);">Nepal on Video</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;">See Nepal Through Our Lens</h2>
+    <p style="font-size:16px;color:rgba(255,255,255,0.55);max-width:560px;line-height:1.75;margin-bottom:40px;">Explore Nepal's breathtaking landscapes and rich culture through these featured videos.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:stretch;">
+      <!-- YouTube 1 -->
+      <div style="border-radius:16px;overflow:hidden;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);box-shadow:0 16px 48px rgba(0,0,0,0.4);">
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" src="https://www.youtube.com/embed/P7ClYUkIQls?si=sbeQY7lIYNJazV1i" title="MATS Nepal Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      <!-- YouTube 2 -->
+      <div style="border-radius:16px;overflow:hidden;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);box-shadow:0 16px 48px rgba(0,0,0,0.4);">
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" src="https://www.youtube.com/embed/6bA6H4tCoac?si=Sj6SbuZsc59_bngz" title="MATS Nepal Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      <!-- TikTok Follow Card -->
+      <div style="border-radius:16px;background:#000;border:1px solid rgba(255,0,80,0.2);box-shadow:0 16px 48px rgba(0,0,0,0.4);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 28px;text-align:center;position:relative;overflow:hidden;min-height:200px;">
+        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(255,0,80,0.12) 0%,transparent 65%),radial-gradient(ellipse at 50% 100%,rgba(0,245,212,0.08) 0%,transparent 65%);pointer-events:none;"></div>
+        <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:16px;">
+          <div style="width:64px;height:64px;background:linear-gradient(135deg,#ff0050,#00f5d4);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 24px rgba(255,0,80,0.3);">🎵</div>
+          <div>
+            <div style="font-family:'Permanent Marker',cursive;font-size:22px;color:#fff;letter-spacing:1px;">@matsnepal</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.45);margin-top:6px;line-height:1.6;">Nepal travel content,<br/>destination reels & updates</div>
+          </div>
+          <a href="https://www.tiktok.com/@matsnepal" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#ff0050;color:#fff;font-size:14px;font-weight:700;padding:12px 24px;border-radius:10px;transition:0.2s;text-decoration:none;" onmouseover="this.style.background='#cc003f'" onmouseout="this.style.background='#ff0050'">
+            Follow on TikTok →
+          </a>
+          <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,0.25);">
+            <span style="width:6px;height:6px;background:#ff0050;border-radius:50%;display:inline-block;animation:tikpulse 2s ease-in-out infinite;"></span>
+            Active on TikTok
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+@keyframes tikpulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.4);}}
+</style>
+
 <!-- SIGNBOARD / FLEX BOARD -->
 <section id="signboard" style="background:var(--cream);padding:48px 24px;">
   <div class="section-inner">
@@ -1862,158 +2133,4 @@ document.addEventListener('click', function(e) {
 });
 </script>
 </body>
-</html<!-- STAY -->
-<section id="stay" aria-labelledby="stay-title" style="background:#fff;padding:48px 24px;">
-  <div class="section-inner">
-    <div class="section-eyebrow">Partner Accommodation</div>
-    <h2 class="section-title" id="stay-title">Places to Stay in Kathmandu</h2>
-    <p class="section-sub">Self-service Airbnb-style stays — arrive, settle in, feel at home. No room service, shared kitchen access. Perfect for travellers, professionals and families.</p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:32px;">
-
-      <!-- APT 1: Studio - Big Room -->
-      <div style="background:var(--cream);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="height:180px;background:linear-gradient(135deg,var(--navy2),#0d2d4a);display:flex;align-items:center;justify-content:center;position:relative;">
-          <!-- REPLACE: <img src="studio-room.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Studio Big Room Mitrapark"/> -->
-          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🛏️</div><div style="font-size:11px;margin-top:6px;">Add your photo</div></div>
-          <div style="position:absolute;top:10px;left:10px;"><span id="avail-studio-big" style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">● Unavailable</span></div>
-          <div style="position:absolute;top:10px;right:10px;cursor:pointer;" onclick="toggleAvail('studio-big')" title="Toggle availability (admin only)"><span style="background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.6);font-size:10px;padding:3px 8px;border-radius:10px;">⚙</span></div>
-        </div>
-        <div style="padding:18px;">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text);">Studio — Big Room</div>
-            <div style="text-align:right;"><div style="font-size:16px;font-weight:700;color:var(--green);">NPR 2,000</div><div style="font-size:10px;color:var(--muted);">per night</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px;"><span style="color:#fbbf24;font-size:12px;">★★★★★</span><span style="font-size:11px;color:var(--muted);">4.6</span></div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">📍 Mitrapark-7, Kathmandu · Near Airport</div>
-          <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;">Private furnished room in a 2-room flat. Shared kitchen access. Suitable for solo travellers, professionals and short stays.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🛋️ Furnished</span>
-            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🍳 Shared Kitchen</span>
-            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🚿 Private Bath</span>
-          </div>
-          <div style="background:#fff3e0;border:1px solid #fcd34d;border-radius:8px;padding:8px 12px;font-size:11px;color:#92400e;margin-bottom:14px;line-height:1.5;">⚠️ Self-service only. No room service provided. Guests are expected to maintain cleanliness. Suitable for respectful, responsible stays.</div>
-          <div style="display:flex;gap:8px;">
-            <button onclick="checkAvailability('studio-big','Studio Big Room')" style="flex:1;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Check Availability</button>
-            <a href="#contact" style="flex:1;background:var(--gold);color:var(--navy);border-radius:8px;padding:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;transition:0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Book Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- APT 2: Studio - Small Room -->
-      <div style="background:var(--cream);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="height:180px;background:linear-gradient(135deg,#1a3a2a,#0d2137);display:flex;align-items:center;justify-content:center;position:relative;">
-          <!-- REPLACE: <img src="studio-small.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Studio Small Room Mitrapark"/> -->
-          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🛏️</div><div style="font-size:11px;margin-top:6px;">Add your photo</div></div>
-          <div style="position:absolute;top:10px;left:10px;"><span id="avail-studio-small" style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">● Unavailable</span></div>
-          <div style="position:absolute;top:10px;right:10px;cursor:pointer;" onclick="toggleAvail('studio-small')" title="Toggle availability (admin only)"><span style="background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.6);font-size:10px;padding:3px 8px;border-radius:10px;">⚙</span></div>
-        </div>
-        <div style="padding:18px;">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text);">Studio — Small Room</div>
-            <div style="text-align:right;"><div style="font-size:16px;font-weight:700;color:var(--green);">NPR 1,000</div><div style="font-size:10px;color:var(--muted);">per night</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px;"><span style="color:#fbbf24;font-size:12px;">★★★★★</span><span style="font-size:11px;color:var(--muted);">4.6</span></div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">📍 Mitrapark-7, Kathmandu · Near Airport</div>
-          <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;">Compact private room in same flat as big room. Book both rooms together for NPR 2,500/night. Shared kitchen access.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🛋️ Furnished</span>
-            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🍳 Shared Kitchen</span>
-            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">💡 Both rooms: NPR 2,500</span>
-          </div>
-          <div style="background:#fff3e0;border:1px solid #fcd34d;border-radius:8px;padding:8px 12px;font-size:11px;color:#92400e;margin-bottom:14px;line-height:1.5;">⚠️ Self-service only. No room service provided. Guests are expected to maintain cleanliness. Suitable for respectful, responsible stays.</div>
-          <div style="display:flex;gap:8px;">
-            <button onclick="checkAvailability('studio-small','Studio Small Room')" style="flex:1;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Check Availability</button>
-            <a href="#contact" style="flex:1;background:var(--gold);color:var(--navy);border-radius:8px;padding:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;transition:0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Book Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- APT 3: Shared Hall -->
-      <div style="background:var(--cream);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="height:180px;background:linear-gradient(135deg,#1a1a3a,#0d1a37);display:flex;align-items:center;justify-content:center;position:relative;">
-          <!-- REPLACE: <img src="shared-hall.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Shared Room Hall Mitrapark"/> -->
-          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🛏️</div><div style="font-size:11px;margin-top:6px;">Add your photo</div></div>
-          <div style="position:absolute;top:10px;left:10px;"><span id="avail-shared-hall" style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">● Unavailable</span></div>
-          <div style="position:absolute;top:10px;right:10px;cursor:pointer;" onclick="toggleAvail('shared-hall')" title="Toggle availability (admin only)"><span style="background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.6);font-size:10px;padding:3px 8px;border-radius:10px;">⚙</span></div>
-        </div>
-        <div style="padding:18px;">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text);">Shared Room — 4 Beds</div>
-            <div style="text-align:right;"><div style="font-size:16px;font-weight:700;color:var(--green);">NPR 3,000</div><div style="font-size:10px;color:var(--muted);">per night</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px;"><span style="color:#fbbf24;font-size:12px;">★★★★★</span><span style="font-size:11px;color:var(--muted);">4.6</span></div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">📍 Mitrapark-7, Kathmandu · Near Airport</div>
-          <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;">Spacious open room with 2 double beds and 2 single beds. Private bathroom. Shared kitchen. Great for groups, families or travellers in transit.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🛏️ 4 Beds</span>
-            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🍳 Shared Kitchen</span>
-            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">👨‍👩‍👧 Family Friendly</span>
-          </div>
-          <div style="background:#fff3e0;border:1px solid #fcd34d;border-radius:8px;padding:8px 12px;font-size:11px;color:#92400e;margin-bottom:14px;line-height:1.5;">⚠️ Self-service only. No room service provided. Guests are expected to maintain cleanliness. Suitable for respectful, responsible stays.</div>
-          <div style="display:flex;gap:8px;">
-            <button onclick="checkAvailability('shared-hall','Shared Room — 4 Beds')" style="flex:1;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Check Availability</button>
-            <a href="#contact" style="flex:1;background:var(--gold);color:var(--navy);border-radius:8px;padding:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;transition:0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Book Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- APT 4: Buddhanagar Rooftop -->
-      <div style="background:var(--cream);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="height:180px;background:linear-gradient(135deg,#2d1a3a,#1a0d37);display:flex;align-items:center;justify-content:center;position:relative;">
-          <!-- REPLACE: <img src="buddhanagar-rooftop.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Rooftop Stay Buddhanagar Kathmandu"/> -->
-          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🌄</div><div style="font-size:11px;margin-top:6px;">Add your photo</div></div>
-          <div style="position:absolute;top:10px;left:10px;"><span id="avail-buddhanagar" style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">● Unavailable</span></div>
-          <div style="position:absolute;top:10px;right:10px;cursor:pointer;" onclick="toggleAvail('buddhanagar')" title="Toggle availability (admin only)"><span style="background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.6);font-size:10px;padding:3px 8px;border-radius:10px;">⚙</span></div>
-        </div>
-        <div style="padding:18px;">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text);">Rooftop Stay — Buddhanagar</div>
-            <div style="text-align:right;"><div style="font-size:16px;font-weight:700;color:var(--green);">NPR 4,000</div><div style="font-size:10px;color:var(--muted);">per night</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px;"><span style="color:#fbbf24;font-size:12px;">★★★★★</span><span style="font-size:11px;color:var(--muted);">4.9</span></div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">📍 Buddhanagar, Kathmandu · Near Int'l Buddhist Meditation Center</div>
-          <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;">Rooftop property with 2 rooms, kitchen and toilet. Peaceful, quiet location — ideal for meditation retreats, focused study or a calm city stay.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
-            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🌄 Rooftop</span>
-            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🍳 Kitchen</span>
-            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🧘 Quiet & Peaceful</span>
-          </div>
-          <div style="background:#fff3e0;border:1px solid #fcd34d;border-radius:8px;padding:8px 12px;font-size:11px;color:#92400e;margin-bottom:14px;line-height:1.5;">⚠️ Self-service only. No room service provided. Guests are expected to maintain cleanliness. Suitable for respectful, responsible stays.</div>
-          <div style="display:flex;gap:8px;">
-            <button onclick="checkAvailability('buddhanagar','Rooftop Stay Buddhanagar')" style="flex:1;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Check Availability</button>
-            <a href="#contact" style="flex:1;background:var(--gold);color:var(--navy);border-radius:8px;padding:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;transition:0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Book Now</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div style="margin-top:20px;padding:14px 18px;background:#f0f7f3;border-radius:10px;border-left:3px solid var(--green);font-size:13px;color:var(--muted);text-align:center;line-height:1.7;">
-      📌 MATS acts as a booking facilitator for these properties. All stays are self-service — no room service or food provided. Shared kitchen available. <a href="#contact" style="color:var(--green);font-weight:700;">Contact us to confirm availability →</a>
-    </div>
-  </div>
-</section><!-- TESTIMONIALS -->
-<section id="testimonials" aria-labelledby="testi-title" style="background:var(--navy);padding:48px 24px;position:relative;overflow:hidden;">
-  <div style="position:absolute;top:-20px;left:30px;font-family:'Playfair Display',serif;font-size:200px;color:rgba(200,146,42,0.05);line-height:1;pointer-events:none;">"</div>
-  <div class="section-inner">
-    <div class="section-eyebrow" style="color:var(--gold);">What Travellers Say</div>
-    <h2 class="section-title" id="testi-title" style="color:#fff;">Trusted by Nepal Travellers</h2>
-    <div class="testi-grid" style="margin-top:32px;">
-      <div class="testi-card">
-        <div style="display:flex;align-items:center;gap:4px;margin-bottom:10px;"><span style="color:#fbbf24;font-size:13px;">★★★★★</span><span style="font-size:12px;color:rgba(255,255,255,0.4);margin-left:4px;">4.9/5</span></div>
-        <p class="testi-text">"Booked a domestic flight Kathmandu to Pokhara through MATS. Got confirmation on WhatsApp within 45 minutes and the e-ticket came straight to my phone. Super smooth — will use again."</p>
-        <div class="testi-author"><div class="testi-avatar">R</div><div><div class="testi-name">Rajesh Sharma</div><div class="testi-role">Kathmandu → Pokhara · Domestic Flight</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div style="display:flex;align-items:center;gap:4px;margin-bottom:10px;"><span style="color:#fbbf24;font-size:13px;">★★★★★</span><span style="font-size:12px;color:rgba(255,255,255,0.4);margin-left:4px;">5.0/5</span></div>
-        <p class="testi-text">"Took my family on the Char Ganesh pilgrimage through MATS. The vehicle was comfortable, all four temples covered in one day, and the guide was very knowledgeable. My parents were very happy."</p>
-        <div class="testi-author"><div class="testi-avatar">S</div><div><div class="testi-name">Sunita Pradhan</div><div class="testi-role">Kathmandu · Char Ganesh Pilgrimage Tour</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div style="display:flex;align-items:center;gap:4px;margin-bottom:10px;"><span style="color:#fbbf24;font-size:13px;">★★★★½</span><span style="font-size:12px;color:rgba(255,255,255,0.4);margin-left:4px;">4.7/5</span></div>
-        <p class="testi-text">"Got bus tickets Kathmandu to Chitwan within an hour of contacting them. Price was fair and they kept me updated throughout. Maitri really means friendship — that is exactly how it felt."</p>
-        <div class="testi-author"><div class="testi-avatar">B</div><div><div class="testi-name">Bikash Thapa</div><div class="testi-role">Kathmandu → Chitwan · Bus Booking</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>>
+</html>
