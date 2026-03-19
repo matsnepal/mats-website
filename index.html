@@ -67,7 +67,7 @@
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(13,33,55,0.5) 0%,rgba(13,33,55,0.2) 40%,rgba(26,92,58,0.3) 100%);}
     .hero-overlay-bottom{position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to top,var(--cream),transparent);}
     .hero-inner{position:relative;z-index:2;max-width:900px;width:100%;text-align:center;}
-    .hero-mats{font-family:'Permanent Marker',cursive;font-size:clamp(72px,16vw,148px);line-height:1;letter-spacing:6px;animation:heroFadeUp 1s ease both;margin-bottom:8px;color:#fff;text-shadow:0 2px 40px rgba(200,146,42,0.25),0 4px 20px rgba(0,0,0,0.5);}
+    .hero-mats{font-family:'Permanent Marker',cursive;font-size:clamp(64px,14vw,136px);line-height:1;letter-spacing:6px;animation:heroFadeUp 1s ease both;margin-bottom:8px;background:linear-gradient(135deg,#fff 0%,#ffffff 30%,#DC143C 55%,#003893 80%,#fff 100%);background-size:300% 300%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 4px 20px rgba(220,20,60,0.3));}
     .hero-mats span{color:var(--gold2);}
     .hero-tagline{font-family:'Playfair Display',serif;font-size:clamp(16px,3vw,24px);font-weight:700;color:rgba(255,255,255,0.92);letter-spacing:1px;margin-bottom:6px;animation:heroFadeUp 1s ease 0.2s both;text-shadow:0 2px 10px rgba(0,0,0,0.4);}
     .hero-sub{font-size:14px;color:rgba(255,255,255,0.6);letter-spacing:2px;text-transform:uppercase;margin-bottom:36px;animation:heroFadeUp 1s ease 0.3s both;}
@@ -752,11 +752,9 @@
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
+    <li><a href="#stay">Stays</a></li>
     <li><a href="#packages">Packages</a></li>
-    <li><a href="#stay">Stay</a></li>
-    <li><a href="#videos">Videos</a></li>
-    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#booking">Flights</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a class="nav-cta" href="#booking">Book Now</a></li>
     <li style="list-style:none;">
@@ -806,8 +804,9 @@
   <div class="hero-overlay-bottom"></div>
   <div class="hero-inner">
     <h1 class="hero-mats">M<span>A</span>TS</h1>
-    <p class="hero-tagline">Discover Nepal – Stay, Explore, Experience</p>
+    <p class="hero-tagline">Book Flight Tickets, Bus Tickets, Apartments &amp; Travel Packages Across Nepal</p>
     <p class="hero-sub">Mitrapark-7, Kathmandu &nbsp;·&nbsp; Licensed Travel Agency</p>
+    <p style="font-family:'Playfair Display',serif;font-size:clamp(15px,2.2vw,19px);color:rgba(255,255,255,0.8);margin-bottom:6px;font-style:italic;text-shadow:0 2px 10px rgba(0,0,0,0.4);animation:heroFadeUp 1s ease 0.25s both;">पारिवारिक आनन्द प्रकृतीको साथमा</p>
     <a href="https://maps.app.goo.gl/9Qxp7FZibvwUyJg86" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:6px 16px;margin-bottom:24px;text-decoration:none;transition:0.2s;backdrop-filter:blur(4px);" onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
       <span style="color:#fbbf24;font-size:14px;letter-spacing:1px;">★★★★★</span>
       <span style="font-size:13px;color:#fff;font-weight:700;">5.0</span>
@@ -830,6 +829,11 @@
       <button onclick="doSearch('bus');document.getElementById('hero-search').value='bus'" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">🚌 Bus Tickets</button>
       <button onclick="doSearch('pilgrimage');document.getElementById('hero-search').value='pilgrimage'" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">🙏 Pilgrimage Tours</button>
       <button onclick="doSearch('apartment');document.getElementById('hero-search').value='apartment'" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">🏠 Stay</button>
+    </div>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;animation:heroFadeUp 1s ease 0.45s both;">
+      <a href="#stay" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);color:#fff;padding:11px 22px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;transition:0.2s;backdrop-filter:blur(4px);" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">🏠 Browse Stays</a>
+      <a href="#packages" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);color:#fff;padding:11px 22px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;transition:0.2s;backdrop-filter:blur(4px);" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">🗺️ View Packages</a>
+      <a href="#booking" style="display:inline-flex;align-items:center;gap:8px;background:var(--red);border:1.5px solid var(--red);color:#fff;padding:11px 22px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;transition:0.2s;" onmouseover="this.style.background='#b71c1c'" onmouseout="this.style.background='var(--red)'">✈ Book a Flight</a>
     </div>
     <div class="booking-wrap" id="booking">
       <div class="booking-tabs-row">
@@ -875,400 +879,122 @@
     <div class="services-grid">
       <div class="service-card">
         <div class="svc-icon">✈️</div>
-        <div class="svc-name">Flight Ticketing</div>
-        <div class="svc-desc">Domestic & international air tickets. We find the best available fare and schedule across all major airlines serving Nepal.</div>
+        <div class="svc-name">Fly anywhere at best prices</div>
+        <div class="svc-desc">Domestic & international flights — we search and book for you fast.</div>
       </div>
       <div class="service-card">
         <div class="svc-icon">🚌</div>
-        <div class="svc-name">Bus & Transport</div>
-        <div class="svc-desc">Tourist buses, deluxe coaches, private jeeps and vehicles across all major Nepal routes — booked and confirmed for you.</div>
+        <div class="svc-name">Bus & transport sorted</div>
+        <div class="svc-desc">Tourist buses, jeeps and coaches across all major Nepal routes.</div>
       </div>
       <div class="service-card">
         <div class="svc-icon">🗺️</div>
-        <div class="svc-name">Tour Packages</div>
-        <div class="svc-desc">Domestic sightseeing, cultural tours, pilgrimage packages and group excursions tailored for Nepali travellers.</div>
+        <div class="svc-name">Tours designed around you</div>
+        <div class="svc-desc">Pilgrimage, cultural and custom packages — we handle everything.</div>
       </div>
       <div class="service-card">
         <div class="svc-icon">🏠</div>
-        <div class="svc-name">Short-Term Stays</div>
-        <div class="svc-desc">Comfortable partner accommodation listings in Kathmandu for short-term and long-term stays — carefully selected for quality.</div>
+        <div class="svc-name">Clean stays, honest prices</div>
+        <div class="svc-desc">Partner accommodation in Kathmandu — self-service, Airbnb-style comfort.</div>
       </div>
       <div class="service-card">
         <div class="svc-icon">🎵</div>
-        <div class="svc-name">Tourism Promotion</div>
-        <div class="svc-desc">Promoting Nepal's destinations through TikTok @matsnepal, digital media and tourism partnerships at national level.</div>
+        <div class="svc-name">Nepal stories worth sharing</div>
+        <div class="svc-desc">Follow @matsnepal on TikTok for destination content and travel tips.</div>
       </div>
       <div class="service-card coming">
         <span class="coming-tag">Coming Soon</span>
         <div class="svc-icon">📄</div>
-        <div class="svc-name">Permits & Visa Support</div>
-        <div class="svc-desc">Travel permits, TIMS cards, trekking permits and government documentation assistance.</div>
+        <div class="svc-name">Permits made easy</div>
+        <div class="svc-desc">TIMS cards, trekking permits and government documentation — handled for you.</div>
       </div>
       <div class="service-card coming">
         <span class="coming-tag">Coming Soon</span>
         <div class="svc-icon">🍽️</div>
-        <div class="svc-name">Events & Catering</div>
-        <div class="svc-desc">Corporate picnics, group outings, event venues and catering for travel and company programmes.</div>
+        <div class="svc-name">Events & group catering</div>
+        <div class="svc-desc">Corporate picnics, group outings and catering programmes.</div>
       </div>
       <div class="service-card coming">
         <span class="coming-tag">Coming Soon</span>
         <div class="svc-icon">🏔️</div>
-        <div class="svc-name">Trekking & Adventure</div>
-        <div class="svc-desc">Guided trekking packages across Nepal's greatest trails. Launching once our trekking licence is in place.</div>
+        <div class="svc-name">Trek Nepal with a guide</div>
+        <div class="svc-desc">Professional guided trekking — launching once our trekking licence is in place.</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CURRENT PACKAGES -->
-<section id="packages" aria-labelledby="packages-title">
+<section id="packages" aria-labelledby="packages-title" style="background:var(--navy);padding:48px 24px;">
   <div class="section-inner">
-    <div class="section-eyebrow" style="color:var(--gold);">Current Packages</div>
-    <h2 class="section-title" id="packages-title">Explore Nepal with MATS</h2>
-    <p class="section-sub">Our currently available tour packages — pilgrimage, culture and custom journeys across Nepal.</p>
+    <div class="section-eyebrow" style="color:var(--gold);">Featured Packages</div>
+    <h2 class="section-title" id="packages-title" style="color:#fff;">Explore Nepal with MATS</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.55);margin:0 auto 32px;text-align:center;">Handpicked tours — pilgrimage, culture and custom journeys across Nepal.</p>
     <div class="packages-grid">
-      <article class="pkg-card">
+
+      <article class="pkg-card" style="position:relative;">
+        <div style="position:absolute;top:14px;right:14px;z-index:2;background:#f59e0b;color:#fff;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;">⭐ Best Seller</div>
         <div class="pkg-img">
-          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80&fit=crop" alt="Ganesh Temple Kathmandu Valley Pilgrimage Nepal" loading="lazy"/>
-          <!-- REPLACE: Add your own Char Ganesh tour photo -->
+          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80&fit=crop" alt="Char Ganesh Pilgrimage Tour Kathmandu" loading="lazy"/>
           <span class="pkg-badge">Pilgrimage</span>
         </div>
         <div class="pkg-body">
-          <h3 class="pkg-title">1-Day Char Ganesh Pilgrimage – Kathmandu Valley</h3>
-          <p class="pkg-desc">Visit all four sacred Ganesh temples of the Kathmandu Valley in one spiritual day journey. Perfect for devotees and culture seekers.</p>
+          <h3 class="pkg-title">Char Ganesh Pilgrimage – Kathmandu Valley</h3>
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;">
+            <span style="color:#fbbf24;font-size:13px;">★★★★★</span>
+            <span style="font-size:12px;color:rgba(255,255,255,0.5);">4.9 · Spiritual tour</span>
+          </div>
           <div class="pkg-meta"><span>📅 1 Day</span><span>📍 Kathmandu Valley</span><span>👥 Group & Private</span></div>
-          <a class="pkg-btn" href="#contact" target="_blank" rel="noopener">Enquire on WhatsApp →</a>
+          <div style="display:flex;gap:10px;margin-top:4px;">
+            <a class="pkg-btn" href="packages.html#char-ganesh" style="flex:1;justify-content:center;background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.2);">View Details</a>
+            <a class="pkg-btn" href="#contact" style="flex:1;justify-content:center;">Book Now →</a>
+          </div>
         </div>
       </article>
-      <article class="pkg-card">
+
+      <article class="pkg-card" style="position:relative;">
+        <div style="position:absolute;top:14px;right:14px;z-index:2;background:var(--green);color:#fff;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;">🔥 Most Popular</div>
         <div class="pkg-img">
-          <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=600&q=80&fit=crop" alt="Narayan Temple Cultural Tour Nepal" loading="lazy"/>
-          <!-- REPLACE: Add your own Char Narayan tour photo -->
+          <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=600&q=80&fit=crop" alt="Char Narayan Temple Tour Nepal" loading="lazy"/>
           <span class="pkg-badge">Cultural</span>
         </div>
         <div class="pkg-body">
-          <h3 class="pkg-title">1-Day Char Narayan Temples Pilgrimage – Kathmandu Valley</h3>
-          <p class="pkg-desc">Explore the four ancient Narayan temples across the Kathmandu Valley — a profound journey through Nepal's Hindu heritage.</p>
+          <h3 class="pkg-title">Char Narayan Temples – Kathmandu Valley</h3>
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;">
+            <span style="color:#fbbf24;font-size:13px;">★★★★★</span>
+            <span style="font-size:12px;color:rgba(255,255,255,0.5);">4.7 · Cultural heritage</span>
+          </div>
           <div class="pkg-meta"><span>📅 1 Day</span><span>📍 Kathmandu Valley</span><span>👥 Group & Private</span></div>
-          <a class="pkg-btn" href="#contact" target="_blank" rel="noopener">Enquire on WhatsApp →</a>
+          <div style="display:flex;gap:10px;margin-top:4px;">
+            <a class="pkg-btn" href="packages.html#char-narayan" style="flex:1;justify-content:center;background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.2);">View Details</a>
+            <a class="pkg-btn" href="#contact" style="flex:1;justify-content:center;">Book Now →</a>
+          </div>
         </div>
       </article>
+
       <article class="pkg-card">
         <div class="pkg-img">
           <div class="pkg-img-ph"><span>🗺️</span>Custom Package</div>
-          <!-- REPLACE: Add a custom tour photo here -->
           <span class="pkg-badge">Custom</span>
         </div>
         <div class="pkg-body">
           <h3 class="pkg-title">Plan Your Custom Nepal Journey</h3>
-          <p class="pkg-desc">Tell us your destination, dates and group size. We design a personalised itinerary with transport, accommodation and guide.</p>
-          <div class="pkg-meta"><span>📅 Flexible</span><span>📍 Anywhere in Nepal</span><span>👥 Any Group Size</span></div>
-          <a class="pkg-btn" href="#contact" target="_blank" rel="noopener">Plan My Trip →</a>
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;">
+            <span style="color:#fbbf24;font-size:13px;">★★★★★</span>
+            <span style="font-size:12px;color:rgba(255,255,255,0.5);">Tailored for you</span>
+          </div>
+          <div class="pkg-meta"><span>📅 Flexible</span><span>📍 Anywhere in Nepal</span><span>👥 Any Size</span></div>
+          <div style="display:flex;gap:10px;margin-top:4px;">
+            <a class="pkg-btn" href="packages.html" style="flex:1;justify-content:center;background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.2);">View All</a>
+            <a class="pkg-btn" href="#contact" style="flex:1;justify-content:center;">Plan My Trip →</a>
+          </div>
         </div>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- STAY -->
-<section id="stay" aria-labelledby="stay-title">
-  <div class="section-inner">
-    <div class="section-eyebrow">Partner Accommodation</div>
-    <h2 class="section-title" id="stay-title">Places to Stay in Kathmandu</h2>
-    <p class="section-sub">Comfortable, affordable stays booked through MATS — we coordinate everything so you just show up and settle in.</p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:28px;">
-
-      <!-- Apt 1: Studio -->
-      <div style="background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="height:180px;background:linear-gradient(135deg,var(--navy2),#0d2d4a);display:flex;align-items:center;justify-content:center;position:relative;">
-          <!-- REPLACE: <img src="YOUR_PHOTO.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Studio Apartment Mitrapark"/> -->
-          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🏠</div><div style="font-size:12px;margin-top:8px;">Add your photo here</div></div>
-          <div style="position:absolute;top:12px;left:12px;display:flex;gap:6px;">
-            <span style="background:var(--green);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;">Studio</span>
-            <span style="background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;">Available</span>
-          </div>
-        </div>
-        <div style="padding:20px;">
-          <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--text);margin-bottom:4px;">Studio Apartment</div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">📍 Mitrapark-7, Kathmandu &nbsp;·&nbsp; Near Tribhuvan Airport</div>
-          <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px;">1 flat with 2 rooms inside and a private bathroom. Fully furnished. Access to shared kitchen in the building.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
-            <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--text);">🛋️ Furnished</span>
-            <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--text);">🚿 Private Bath</span>
-            <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--text);">🍳 Shared Kitchen</span>
-            <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--text);">🚪 2 Rooms</span>
-          </div>
-          <a href="#contact" style="display:inline-flex;align-items:center;gap:6px;background:var(--navy);color:#fff;font-size:13px;font-weight:700;padding:10px 18px;border-radius:8px;transition:0.2s;text-decoration:none;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Enquire Now →</a>
-        </div>
-      </div>
-
-      <!-- Apt 2: Shared Room -->
-      <div style="background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="height:180px;background:linear-gradient(135deg,#1a3a2a,#0d2137);display:flex;align-items:center;justify-content:center;position:relative;">
-          <!-- REPLACE: <img src="YOUR_PHOTO.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Shared Room Mitrapark"/> -->
-          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🛏️</div><div style="font-size:12px;margin-top:8px;">Add your photo here</div></div>
-          <div style="position:absolute;top:12px;left:12px;display:flex;gap:6px;">
-            <span style="background:#2980b9;color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;">Shared Room</span>
-            <span style="background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;">Available</span>
-          </div>
-        </div>
-        <div style="padding:20px;">
-          <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--text);margin-bottom:4px;">Shared Room — 4 Beds</div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">📍 Mitrapark-7, Kathmandu &nbsp;·&nbsp; Same Building</div>
-          <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px;">Open room with 4 beds — 2 double beds and 2 single beds. One private bathroom. Access to shared kitchen. Great for groups or budget travellers.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
-            <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--text);">🛏️ 4 Beds</span>
-            <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--text);">🚿 Private Bath</span>
-            <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--text);">🍳 Shared Kitchen</span>
-            <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--text);">👥 Group Friendly</span>
-          </div>
-          <a href="#contact" style="display:inline-flex;align-items:center;gap:6px;background:var(--navy);color:#fff;font-size:13px;font-weight:700;padding:10px 18px;border-radius:8px;transition:0.2s;text-decoration:none;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Enquire Now →</a>
-        </div>
-      </div>
-
-      <!-- Apt 3: Buddhanagar Rooftop -->
-      <div style="background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="height:180px;background:linear-gradient(135deg,#2d1a3a,#1a0d37);display:flex;align-items:center;justify-content:center;position:relative;">
-          <!-- REPLACE: <img src="YOUR_PHOTO.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Rooftop Room Buddhanagar"/> -->
-          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🌄</div><div style="font-size:12px;margin-top:8px;">Add your photo here</div></div>
-          <div style="position:absolute;top:12px;left:12px;display:flex;gap:6px;">
-            <span style="background:#8e44ad;color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;">Rooftop</span>
-            <span style="background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;">Available</span>
-          </div>
-        </div>
-        <div style="padding:20px;">
-          <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--text);margin-bottom:4px;">Rooftop Stay — Buddhanagar</div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">📍 Buddhanagar, Kathmandu &nbsp;·&nbsp; Near Int'l Buddhist Meditation Center</div>
-          <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px;">Rooftop property with 2 rooms, kitchen with extra sleeping space, and toilet. Peaceful location near the International Buddhist Meditation Center.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
-            <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--text);">🌄 Rooftop</span>
-            <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--text);">🚽 Toilet</span>
-            <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--text);">🍳 Kitchen</span>
-            <span style="background:var(--cream);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--text);">🧘 Peaceful Area</span>
-          </div>
-          <a href="#contact" style="display:inline-flex;align-items:center;gap:6px;background:var(--navy);color:#fff;font-size:13px;font-weight:700;padding:10px 18px;border-radius:8px;transition:0.2s;text-decoration:none;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Enquire Now →</a>
-        </div>
-      </div>
 
     </div>
-    <div style="margin-top:24px;padding:16px 20px;background:#f0f7f3;border-radius:10px;border-left:3px solid var(--green);font-size:13px;color:var(--muted);line-height:1.7;">
-      📌 MATS acts as a booking facilitator for these properties. We coordinate your stay, handle enquiries and ensure a smooth check-in. <a href="#contact" style="color:var(--green);font-weight:700;">Contact us to check availability →</a>
+    <div style="text-align:center;margin-top:28px;">
+      <a href="packages.html" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:12px 28px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;transition:0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">View All Packages →</a>
     </div>
-  </div>
-</section>
-
-
-
-<!-- WHY CHOOSE MATS -->
-<section id="why" aria-labelledby="why-title">
-  <div class="section-inner">
-    <div class="section-eyebrow">Why Choose MATS</div>
-    <h2 class="section-title" id="why-title">Travel with Confidence</h2>
-    <p class="section-sub">We are a licensed, registered agency — not just a social media page. Here is what sets us apart.</p>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">🏛️</div>
-        <div class="why-title">Officially Licensed</div>
-        <div class="why-desc">Travel Agency Licence No. 4593/082/083. Registered Private Limited Company under the laws of Nepal.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">💬</div>
-        <div class="why-title">WhatsApp-First Service</div>
-        <div class="why-desc">We respond within 1–2 hours on WhatsApp. Real people, not bots. Your ticket confirmed and sent directly to you.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">✈️</div>
-        <div class="why-title">All Airlines, One Place</div>
-        <div class="why-desc">Domestic and international flights. We search across all available airlines to find you the best fare and schedule.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">💳</div>
-        <div class="why-title">Flexible Payment</div>
-        <div class="why-desc">eSewa, Khalti, bank transfer or cash — pay the way that works for you. Simple, transparent pricing.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🤝</div>
-        <div class="why-title">Maitri — Friendship</div>
-        <div class="why-desc">Our name says it all. We treat every customer like a friend — honest advice, fair prices, genuine care.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">📍</div>
-        <div class="why-title">Local Kathmandu Knowledge</div>
-        <div class="why-desc">Based in Mitrapark-7, Kathmandu. We know Nepal — and we are here to help you navigate it.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MISSION & VISION -->
-<section id="mission" aria-labelledby="mission-title">
-  <div class="section-inner">
-    <div class="section-eyebrow" style="color:var(--gold);justify-content:center;">Our Purpose</div>
-    <h2 class="section-title" id="mission-title" style="color:#fff;text-align:center;">Why MATS Exists</h2>
-    <p class="section-sub" style="color:rgba(255,255,255,0.55);margin:0 auto;text-align:center;">The name <em>Maitri</em> means friendship in Sanskrit. Everything we do is built on that foundation — warm, honest, reliable service for every traveller.</p>
-    <div class="mv-grid">
-      <div class="mv-card">
-        <div class="mv-icon">🚀</div>
-        <div class="mv-label">Our Mission</div>
-        <div class="mv-title">Building a Brand You Come Back To</div>
-        <div class="mv-text">To build a trusted brand that inspires repeat travel by managing the necessary infrastructure for travel and hospitality — making every journey smooth, reliable and worth repeating.</div>
-      </div>
-      <div class="mv-card">
-        <div class="mv-icon">🌄</div>
-        <div class="mv-label">Our Vision</div>
-        <div class="mv-title">Nepal, Experienced Deeply</div>
-        <div class="mv-text">To provide customer-centric, organised accommodation, travel and hospitality services for those who wish to learn about Nepal's culture and traditions and explore its natural beauty.</div>
-      </div>
-    </div>
-    <div style="margin-top:32px;background:rgba(255,255,255,0.04);border:1px solid rgba(200,146,42,0.15);border-radius:16px;padding:28px 36px;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--green2));"></div>
-      <p style="font-family:'Playfair Display',serif;font-size:clamp(14px,2vw,18px);color:rgba(255,255,255,0.8);line-height:1.9;text-align:center;font-style:italic;">
-        "सुरक्षित एवं आरामदायी वसोवासको साथमा नेपालको संस्कृती, परम्परा,<br/>प्राकृतिक मनमोहक दृश्यहरुको अवलोकन गर्ने अवसर"
-      </p>
-      <p style="text-align:center;font-size:13px;color:rgba(255,255,255,0.35);margin-top:12px;letter-spacing:2px;text-transform:uppercase;">Maitri Apartment & Travel Services Pvt. Ltd.</p>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials" aria-labelledby="testi-title">
-  <div class="section-inner">
-    <div class="section-eyebrow" style="color:var(--gold);">What Travellers Say</div>
-    <h2 class="section-title" id="testi-title" style="color:#fff;">Trusted by Nepal Travellers</h2>
-    <p class="section-sub" style="color:rgba(255,255,255,0.5);">Real experiences from people who travelled with MATS.</p>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Booked a domestic flight through MATS and the process was so smooth. They confirmed everything on WhatsApp within an hour and sent the e-ticket right away. Will definitely use again."</p>
-        <div class="testi-author"><div class="testi-avatar">R</div><div><div class="testi-name">Rajesh Sharma</div><div class="testi-role">Kathmandu – Domestic Flight</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"We did the Char Ganesh pilgrimage tour as a family and it was beautifully organised. The team was helpful, the vehicle was comfortable and all temples were covered in one day. Highly recommend."</p>
-        <div class="testi-author"><div class="testi-avatar">S</div><div><div class="testi-name">Sunita Pradhan</div><div class="testi-role">Kathmandu – Pilgrimage Tour</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Very professional for a new agency. They arranged our bus tickets to Pokhara quickly and the price was fair. Good communication throughout. Maitri is the right name — felt like dealing with a friend."</p>
-        <div class="testi-author"><div class="testi-avatar">B</div><div><div class="testi-name">Bikash Thapa</div><div class="testi-role">Kathmandu–Pokhara – Bus Ticket</div></div></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- VIDEOS & TIKTOK -->
-<section id="videos" style="background:var(--navy);padding:48px 24px;">
-  <div class="section-inner">
-    <div class="section-eyebrow" style="color:var(--gold);">Nepal on Video</div>
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;">See Nepal Through Our Lens</h2>
-    <p style="font-size:16px;color:rgba(255,255,255,0.55);max-width:560px;line-height:1.75;margin-bottom:40px;">Explore Nepal's breathtaking landscapes and rich culture through these featured videos.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:stretch;" class="video-grid">
-      <!-- YouTube 1 -->
-      <div style="border-radius:16px;overflow:hidden;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);box-shadow:0 16px 48px rgba(0,0,0,0.4);">
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-          <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" src="https://www.youtube.com/embed/P7ClYUkIQls?si=sbeQY7lIYNJazV1i" title="MATS Nepal Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-      <!-- YouTube 2 -->
-      <div style="border-radius:16px;overflow:hidden;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);box-shadow:0 16px 48px rgba(0,0,0,0.4);">
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-          <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" src="https://www.youtube.com/embed/6bA6H4tCoac?si=Sj6SbuZsc59_bngz" title="MATS Nepal Video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-      <!-- TikTok Follow Card -->
-      <div style="border-radius:16px;background:#000;border:1px solid rgba(255,0,80,0.2);box-shadow:0 16px 48px rgba(0,0,0,0.4);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 28px;text-align:center;position:relative;overflow:hidden;min-height:200px;">
-        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(255,0,80,0.12) 0%,transparent 65%),radial-gradient(ellipse at 50% 100%,rgba(0,245,212,0.08) 0%,transparent 65%);pointer-events:none;"></div>
-        <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:16px;">
-          <div style="width:64px;height:64px;background:linear-gradient(135deg,#ff0050,#00f5d4);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 24px rgba(255,0,80,0.3);">🎵</div>
-          <div>
-            <div style="font-family:'Permanent Marker',cursive;font-size:22px;color:#fff;letter-spacing:1px;">@matsnepal</div>
-            <div style="font-size:13px;color:rgba(255,255,255,0.45);margin-top:6px;line-height:1.6;">Nepal travel content,<br/>destination reels & updates</div>
-          </div>
-          <a href="https://www.tiktok.com/@matsnepal" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#ff0050;color:#fff;font-size:14px;font-weight:700;padding:12px 24px;border-radius:10px;transition:0.2s;text-decoration:none;" onmouseover="this.style.background='#cc003f'" onmouseout="this.style.background='#ff0050'">
-            Follow on TikTok →
-          </a>
-          <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,0.25);">
-            <span style="width:6px;height:6px;background:#ff0050;border-radius:50%;display:inline-block;animation:tikpulse 2s ease-in-out infinite;"></span>
-            Active on TikTok
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<style>
-@keyframes tikpulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.4);}}
-</style>
-
-<!-- FUTURE PACKAGES -->
-<section id="future-packages" aria-labelledby="future-title">
-  <div class="section-inner">
-    <div class="section-eyebrow">Coming Soon</div>
-    <h2 class="section-title" id="future-title">The Future of MATS Travel</h2>
-    <p class="section-sub">We are building a comprehensive range of Nepal travel experiences. Here is what is coming.</p>
-    <div class="future-alert">
-      <div class="future-alert-title">🚨 Important Notice</div>
-      <div class="future-alert-text">We are <strong>not currently providing</strong> the packages listed below. We are in the process of developing these services and will offer them in the near future. Stay tuned for updates — follow us on TikTok @matsnepal for announcements.</div>
-    </div>
-    <div class="future-cats">
-      <div class="future-cat">
-        <div class="fc-header"><div class="fc-icon">🙏</div><div class="fc-title">Religious & Pilgrimage</div></div>
-        <ul class="fc-items">
-          <li>Pilgrimage tours to sacred sites across Nepal</li>
-          <li>Meditation retreats and spiritual journeys</li>
-          <li>Faith healing and wellness experiences</li>
-        </ul>
-      </div>
-      <div class="future-cat">
-        <div class="fc-header"><div class="fc-icon">🧗</div><div class="fc-title">Adventure Packages</div></div>
-        <ul class="fc-items">
-          <li>Trekking in the Himalayas</li>
-          <li>Zip flying, skydiving & bungee jumping</li>
-          <li>Motorbiking & mountain biking expeditions</li>
-          <li>Rafting, kayaking & canyoning</li>
-          <li>Paragliding, hiking & camping</li>
-          <li>Cave exploration & hot air balloon rides</li>
-        </ul>
-      </div>
-      <div class="future-cat">
-        <div class="fc-header"><div class="fc-icon">🌿</div><div class="fc-title">Nature & Wildlife</div></div>
-        <ul class="fc-items">
-          <li>Bird watching and butterfly watching</li>
-          <li>Mountain viewing & jungle discovery</li>
-          <li>Nagarkot sunrise and sunset tours</li>
-          <li>Wetland exploration</li>
-        </ul>
-      </div>
-      <div class="future-cat">
-        <div class="fc-header"><div class="fc-icon">🏛️</div><div class="fc-title">Cultural & Heritage</div></div>
-        <ul class="fc-items">
-          <li>Village tours & homestays</li>
-          <li>Traditional crafts and meet-the-people experiences</li>
-          <li>Food & culinary tours</li>
-          <li>Heritage walks & museum visits</li>
-        </ul>
-      </div>
-      <div class="future-cat">
-        <div class="fc-header"><div class="fc-icon">🧘</div><div class="fc-title">Wellness & Rejuvenation</div></div>
-        <ul class="fc-items">
-          <li>Ayurveda and Panchakarma treatments</li>
-          <li>Sound meditation experiences</li>
-          <li>Natural hot water springs</li>
-        </ul>
-      </div>
-      <div class="future-cat">
-        <div class="fc-header"><div class="fc-icon">🎊</div><div class="fc-title">Special Packages</div></div>
-        <ul class="fc-items">
-          <li>Destination weddings in Nepal</li>
-          <li>MICE — Meetings, Incentives, Conferences & Exhibitions</li>
-          <li>Corporate group travel programmes</li>
-        </ul>
-      </div>
-    </div>
-    <div class="future-footer-note">📢 These services are under development. Follow @matsnepal on TikTok for launch announcements. <a href="#contact" target="_blank" style="color:var(--green);text-decoration:underline;">Register your interest on WhatsApp →</a></div>
   </div>
 </section>
 
@@ -1946,6 +1672,50 @@ function submitFeedback() {
     .catch(function() { alert('Network error. Please try again.'); });
 }
 
+// AVAILABILITY
+var availStatus = {
+  'studio-big': false,
+  'studio-small': false,
+  'shared-hall': false,
+  'buddhanagar': false
+};
+
+function checkAvailability(id, name) {
+  var isAvail = availStatus[id] || false;
+  var modal = document.createElement('div');
+  modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:4000;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px);';
+  var box = document.createElement('div');
+  box.style.cssText = 'background:#fff;border-radius:20px;padding:32px;max-width:380px;width:100%;text-align:center;';
+  var icon = isAvail ? '✅' : '❌';
+  var color = isAvail ? '#065f46' : '#991b1b';
+  var bg = isAvail ? '#d1fae5' : '#fee2e2';
+  var statusText = isAvail ? 'Available' : 'Currently Unavailable';
+  var msg = isAvail
+    ? 'Great news! <strong>' + name + '</strong> is currently available. Contact us to confirm your dates and complete your booking.'
+    : '<strong>' + name + '</strong> is not available right now. Contact us on WhatsApp — we may have alternative options for your dates.';
+  box.innerHTML = '<div style="font-size:48px;margin-bottom:16px;">' + icon + '</div>'
+    + '<div style="display:inline-block;background:' + bg + ';color:' + color + ';font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;margin-bottom:16px;">' + statusText + '</div>'
+    + '<h3 style="font-size:18px;font-weight:700;color:#1a1a2a;margin-bottom:10px;">' + name + '</h3>'
+    + '<p style="font-size:14px;color:#5a6070;line-height:1.7;margin-bottom:24px;">' + msg + '</p>'
+    + '<div style="display:flex;gap:10px;justify-content:center;">'
+    + '<a href="https://wa.me/9779823356668?text=Hi%20MATS%2C%20I%20am%20interested%20in%20' + encodeURIComponent(name) + '" target="_blank" style="background:#25d366;color:#fff;padding:11px 20px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;">💬 WhatsApp</a>'
+    + '<button onclick="this.closest('div').parentElement.parentElement.remove()" style="background:#f3f4f6;color:#374151;border:none;padding:11px 20px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;">Close</button>'
+    + '</div>';
+  modal.appendChild(box);
+  modal.addEventListener('click', function(e){ if(e.target===modal) modal.remove(); });
+  document.body.appendChild(modal);
+}
+
+function toggleAvail(id) {
+  // Simple admin toggle - click the ⚙ icon to flip availability
+  availStatus[id] = !availStatus[id];
+  var el = document.getElementById('avail-' + id);
+  if (el) {
+    el.style.background = availStatus[id] ? '#16a34a' : '#dc2626';
+    el.textContent = availStatus[id] ? '● Available' : '● Unavailable';
+  }
+}
+
 // PARALLAX
 window.addEventListener('scroll', function() {
   var bg = document.getElementById('hero-bg');
@@ -2092,4 +1862,158 @@ document.addEventListener('click', function(e) {
 });
 </script>
 </body>
-</html>
+</html<!-- STAY -->
+<section id="stay" aria-labelledby="stay-title" style="background:#fff;padding:48px 24px;">
+  <div class="section-inner">
+    <div class="section-eyebrow">Partner Accommodation</div>
+    <h2 class="section-title" id="stay-title">Places to Stay in Kathmandu</h2>
+    <p class="section-sub">Self-service Airbnb-style stays — arrive, settle in, feel at home. No room service, shared kitchen access. Perfect for travellers, professionals and families.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:32px;">
+
+      <!-- APT 1: Studio - Big Room -->
+      <div style="background:var(--cream);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="height:180px;background:linear-gradient(135deg,var(--navy2),#0d2d4a);display:flex;align-items:center;justify-content:center;position:relative;">
+          <!-- REPLACE: <img src="studio-room.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Studio Big Room Mitrapark"/> -->
+          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🛏️</div><div style="font-size:11px;margin-top:6px;">Add your photo</div></div>
+          <div style="position:absolute;top:10px;left:10px;"><span id="avail-studio-big" style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">● Unavailable</span></div>
+          <div style="position:absolute;top:10px;right:10px;cursor:pointer;" onclick="toggleAvail('studio-big')" title="Toggle availability (admin only)"><span style="background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.6);font-size:10px;padding:3px 8px;border-radius:10px;">⚙</span></div>
+        </div>
+        <div style="padding:18px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text);">Studio — Big Room</div>
+            <div style="text-align:right;"><div style="font-size:16px;font-weight:700;color:var(--green);">NPR 2,000</div><div style="font-size:10px;color:var(--muted);">per night</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px;"><span style="color:#fbbf24;font-size:12px;">★★★★★</span><span style="font-size:11px;color:var(--muted);">4.6</span></div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">📍 Mitrapark-7, Kathmandu · Near Airport</div>
+          <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;">Private furnished room in a 2-room flat. Shared kitchen access. Suitable for solo travellers, professionals and short stays.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🛋️ Furnished</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🍳 Shared Kitchen</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🚿 Private Bath</span>
+          </div>
+          <div style="background:#fff3e0;border:1px solid #fcd34d;border-radius:8px;padding:8px 12px;font-size:11px;color:#92400e;margin-bottom:14px;line-height:1.5;">⚠️ Self-service only. No room service provided. Guests are expected to maintain cleanliness. Suitable for respectful, responsible stays.</div>
+          <div style="display:flex;gap:8px;">
+            <button onclick="checkAvailability('studio-big','Studio Big Room')" style="flex:1;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Check Availability</button>
+            <a href="#contact" style="flex:1;background:var(--gold);color:var(--navy);border-radius:8px;padding:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;transition:0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- APT 2: Studio - Small Room -->
+      <div style="background:var(--cream);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="height:180px;background:linear-gradient(135deg,#1a3a2a,#0d2137);display:flex;align-items:center;justify-content:center;position:relative;">
+          <!-- REPLACE: <img src="studio-small.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Studio Small Room Mitrapark"/> -->
+          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🛏️</div><div style="font-size:11px;margin-top:6px;">Add your photo</div></div>
+          <div style="position:absolute;top:10px;left:10px;"><span id="avail-studio-small" style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">● Unavailable</span></div>
+          <div style="position:absolute;top:10px;right:10px;cursor:pointer;" onclick="toggleAvail('studio-small')" title="Toggle availability (admin only)"><span style="background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.6);font-size:10px;padding:3px 8px;border-radius:10px;">⚙</span></div>
+        </div>
+        <div style="padding:18px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text);">Studio — Small Room</div>
+            <div style="text-align:right;"><div style="font-size:16px;font-weight:700;color:var(--green);">NPR 1,000</div><div style="font-size:10px;color:var(--muted);">per night</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px;"><span style="color:#fbbf24;font-size:12px;">★★★★★</span><span style="font-size:11px;color:var(--muted);">4.6</span></div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">📍 Mitrapark-7, Kathmandu · Near Airport</div>
+          <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;">Compact private room in same flat as big room. Book both rooms together for NPR 2,500/night. Shared kitchen access.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🛋️ Furnished</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🍳 Shared Kitchen</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">💡 Both rooms: NPR 2,500</span>
+          </div>
+          <div style="background:#fff3e0;border:1px solid #fcd34d;border-radius:8px;padding:8px 12px;font-size:11px;color:#92400e;margin-bottom:14px;line-height:1.5;">⚠️ Self-service only. No room service provided. Guests are expected to maintain cleanliness. Suitable for respectful, responsible stays.</div>
+          <div style="display:flex;gap:8px;">
+            <button onclick="checkAvailability('studio-small','Studio Small Room')" style="flex:1;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Check Availability</button>
+            <a href="#contact" style="flex:1;background:var(--gold);color:var(--navy);border-radius:8px;padding:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;transition:0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- APT 3: Shared Hall -->
+      <div style="background:var(--cream);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="height:180px;background:linear-gradient(135deg,#1a1a3a,#0d1a37);display:flex;align-items:center;justify-content:center;position:relative;">
+          <!-- REPLACE: <img src="shared-hall.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Shared Room Hall Mitrapark"/> -->
+          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🛏️</div><div style="font-size:11px;margin-top:6px;">Add your photo</div></div>
+          <div style="position:absolute;top:10px;left:10px;"><span id="avail-shared-hall" style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">● Unavailable</span></div>
+          <div style="position:absolute;top:10px;right:10px;cursor:pointer;" onclick="toggleAvail('shared-hall')" title="Toggle availability (admin only)"><span style="background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.6);font-size:10px;padding:3px 8px;border-radius:10px;">⚙</span></div>
+        </div>
+        <div style="padding:18px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text);">Shared Room — 4 Beds</div>
+            <div style="text-align:right;"><div style="font-size:16px;font-weight:700;color:var(--green);">NPR 3,000</div><div style="font-size:10px;color:var(--muted);">per night</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px;"><span style="color:#fbbf24;font-size:12px;">★★★★★</span><span style="font-size:11px;color:var(--muted);">4.6</span></div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">📍 Mitrapark-7, Kathmandu · Near Airport</div>
+          <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;">Spacious open room with 2 double beds and 2 single beds. Private bathroom. Shared kitchen. Great for groups, families or travellers in transit.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🛏️ 4 Beds</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🍳 Shared Kitchen</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">👨‍👩‍👧 Family Friendly</span>
+          </div>
+          <div style="background:#fff3e0;border:1px solid #fcd34d;border-radius:8px;padding:8px 12px;font-size:11px;color:#92400e;margin-bottom:14px;line-height:1.5;">⚠️ Self-service only. No room service provided. Guests are expected to maintain cleanliness. Suitable for respectful, responsible stays.</div>
+          <div style="display:flex;gap:8px;">
+            <button onclick="checkAvailability('shared-hall','Shared Room — 4 Beds')" style="flex:1;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Check Availability</button>
+            <a href="#contact" style="flex:1;background:var(--gold);color:var(--navy);border-radius:8px;padding:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;transition:0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- APT 4: Buddhanagar Rooftop -->
+      <div style="background:var(--cream);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:0.3s;position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="height:180px;background:linear-gradient(135deg,#2d1a3a,#1a0d37);display:flex;align-items:center;justify-content:center;position:relative;">
+          <!-- REPLACE: <img src="buddhanagar-rooftop.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Rooftop Stay Buddhanagar Kathmandu"/> -->
+          <div style="text-align:center;color:rgba(255,255,255,0.3);"><div style="font-size:48px;">🌄</div><div style="font-size:11px;margin-top:6px;">Add your photo</div></div>
+          <div style="position:absolute;top:10px;left:10px;"><span id="avail-buddhanagar" style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;">● Unavailable</span></div>
+          <div style="position:absolute;top:10px;right:10px;cursor:pointer;" onclick="toggleAvail('buddhanagar')" title="Toggle availability (admin only)"><span style="background:rgba(0,0,0,0.5);color:rgba(255,255,255,0.6);font-size:10px;padding:3px 8px;border-radius:10px;">⚙</span></div>
+        </div>
+        <div style="padding:18px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text);">Rooftop Stay — Buddhanagar</div>
+            <div style="text-align:right;"><div style="font-size:16px;font-weight:700;color:var(--green);">NPR 4,000</div><div style="font-size:10px;color:var(--muted);">per night</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px;"><span style="color:#fbbf24;font-size:12px;">★★★★★</span><span style="font-size:11px;color:var(--muted);">4.9</span></div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">📍 Buddhanagar, Kathmandu · Near Int'l Buddhist Meditation Center</div>
+          <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;">Rooftop property with 2 rooms, kitchen and toilet. Peaceful, quiet location — ideal for meditation retreats, focused study or a calm city stay.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🌄 Rooftop</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🍳 Kitchen</span>
+            <span style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;">🧘 Quiet & Peaceful</span>
+          </div>
+          <div style="background:#fff3e0;border:1px solid #fcd34d;border-radius:8px;padding:8px 12px;font-size:11px;color:#92400e;margin-bottom:14px;line-height:1.5;">⚠️ Self-service only. No room service provided. Guests are expected to maintain cleanliness. Suitable for respectful, responsible stays.</div>
+          <div style="display:flex;gap:8px;">
+            <button onclick="checkAvailability('buddhanagar','Rooftop Stay Buddhanagar')" style="flex:1;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:0.2s;" onmouseover="this.style.background='var(--green)'" onmouseout="this.style.background='var(--navy)'">Check Availability</button>
+            <a href="#contact" style="flex:1;background:var(--gold);color:var(--navy);border-radius:8px;padding:10px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;transition:0.2s;" onmouseover="this.style.background='var(--gold2)'" onmouseout="this.style.background='var(--gold)'">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="margin-top:20px;padding:14px 18px;background:#f0f7f3;border-radius:10px;border-left:3px solid var(--green);font-size:13px;color:var(--muted);text-align:center;line-height:1.7;">
+      📌 MATS acts as a booking facilitator for these properties. All stays are self-service — no room service or food provided. Shared kitchen available. <a href="#contact" style="color:var(--green);font-weight:700;">Contact us to confirm availability →</a>
+    </div>
+  </div>
+</section><!-- TESTIMONIALS -->
+<section id="testimonials" aria-labelledby="testi-title" style="background:var(--navy);padding:48px 24px;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-20px;left:30px;font-family:'Playfair Display',serif;font-size:200px;color:rgba(200,146,42,0.05);line-height:1;pointer-events:none;">"</div>
+  <div class="section-inner">
+    <div class="section-eyebrow" style="color:var(--gold);">What Travellers Say</div>
+    <h2 class="section-title" id="testi-title" style="color:#fff;">Trusted by Nepal Travellers</h2>
+    <div class="testi-grid" style="margin-top:32px;">
+      <div class="testi-card">
+        <div style="display:flex;align-items:center;gap:4px;margin-bottom:10px;"><span style="color:#fbbf24;font-size:13px;">★★★★★</span><span style="font-size:12px;color:rgba(255,255,255,0.4);margin-left:4px;">4.9/5</span></div>
+        <p class="testi-text">"Booked a domestic flight Kathmandu to Pokhara through MATS. Got confirmation on WhatsApp within 45 minutes and the e-ticket came straight to my phone. Super smooth — will use again."</p>
+        <div class="testi-author"><div class="testi-avatar">R</div><div><div class="testi-name">Rajesh Sharma</div><div class="testi-role">Kathmandu → Pokhara · Domestic Flight</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div style="display:flex;align-items:center;gap:4px;margin-bottom:10px;"><span style="color:#fbbf24;font-size:13px;">★★★★★</span><span style="font-size:12px;color:rgba(255,255,255,0.4);margin-left:4px;">5.0/5</span></div>
+        <p class="testi-text">"Took my family on the Char Ganesh pilgrimage through MATS. The vehicle was comfortable, all four temples covered in one day, and the guide was very knowledgeable. My parents were very happy."</p>
+        <div class="testi-author"><div class="testi-avatar">S</div><div><div class="testi-name">Sunita Pradhan</div><div class="testi-role">Kathmandu · Char Ganesh Pilgrimage Tour</div></div></div>
+      </div>
+      <div class="testi-card">
+        <div style="display:flex;align-items:center;gap:4px;margin-bottom:10px;"><span style="color:#fbbf24;font-size:13px;">★★★★½</span><span style="font-size:12px;color:rgba(255,255,255,0.4);margin-left:4px;">4.7/5</span></div>
+        <p class="testi-text">"Got bus tickets Kathmandu to Chitwan within an hour of contacting them. Price was fair and they kept me updated throughout. Maitri really means friendship — that is exactly how it felt."</p>
+        <div class="testi-author"><div class="testi-avatar">B</div><div><div class="testi-name">Bikash Thapa</div><div class="testi-role">Kathmandu → Chitwan · Bus Booking</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>>
