@@ -325,10 +325,6 @@
     .fcc-item a{color:rgba(255,255,255,0.55);transition:color 0.2s;}
     .fcc-item a:hover{color:var(--gold2);}
     .footer-divider{border:none;border-top:1px solid rgba(255,255,255,0.06);margin-bottom:24px;}
-    .footer-reg-strip{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:20px 24px;margin-bottom:24px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:center;}
-    .reg-item{display:flex;flex-direction:column;gap:3px;}
-    .reg-label{font-size:10px;font-weight:700;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:1.5px;}
-    .reg-value{font-size:13px;font-weight:700;color:rgba(255,255,255,0.65);font-family:monospace;letter-spacing:0.5px;}
     .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
     .footer-copy{font-size:12px;color:rgba(255,255,255,0.2);}
     .footer-bottom-links{display:flex;gap:18px;flex-wrap:wrap;}
@@ -348,6 +344,39 @@
     .modal-body ul li{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:6px;}
 
 
+
+    /* MEMBER DASHBOARD */
+    .dash-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:3000;align-items:flex-start;justify-content:center;padding:20px;backdrop-filter:blur(6px);overflow-y:auto;}
+    .dash-overlay.open{display:flex;}
+    .dash-box{background:var(--cream);border-radius:20px;width:100%;max-width:760px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.4);margin:auto;}
+    .dash-header{background:var(--navy);padding:0;position:relative;}
+    .dash-card{background:linear-gradient(135deg,#0d2137 0%,#1a3a5c 50%,#0d2137 100%);padding:32px;position:relative;overflow:hidden;}
+    .dash-card::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(200,146,42,0.15),transparent 70%);}
+    .dash-card-logo{font-family:'Permanent Marker',cursive;font-size:20px;color:var(--gold2);letter-spacing:2px;margin-bottom:20px;opacity:0.8;}
+    .dash-card-name{font-family:'Playfair Display',serif;font-size:24px;color:#fff;font-weight:700;margin-bottom:4px;}
+    .dash-card-code{font-size:13px;color:var(--gold2);letter-spacing:3px;font-weight:700;margin-bottom:16px;font-family:monospace;}
+    .dash-card-row{display:flex;gap:24px;flex-wrap:wrap;}
+    .dash-card-item{font-size:11px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;}
+    .dash-card-item strong{display:block;font-size:13px;color:rgba(255,255,255,0.85);margin-top:2px;text-transform:none;letter-spacing:0;}
+    .dash-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.1);border:none;color:rgba(255,255,255,0.7);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;}
+    .dash-tabs{display:flex;background:#fff;border-bottom:1px solid var(--border);}
+    .dash-tab{flex:1;padding:14px;text-align:center;font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;border:none;background:none;font-family:'DM Sans',sans-serif;transition:0.2s;border-bottom:2px solid transparent;margin-bottom:-1px;}
+    .dash-tab.active{color:var(--navy);border-bottom-color:var(--gold);}
+    .dash-body{background:#fff;padding:24px;}
+    .dash-section{display:none;}
+    .dash-section.active{display:block;}
+    .dash-field{margin-bottom:16px;}
+    .dash-field label{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+    .dash-field input,.dash-field select,.dash-field textarea{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border 0.2s;box-sizing:border-box;}
+    .dash-field input:focus,.dash-field select:focus,.dash-field textarea:focus{border-color:var(--gold);}
+    .dash-save{background:var(--navy);color:#fff;border:none;border-radius:10px;padding:12px 24px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:0.2s;}
+    .dash-save:hover{background:var(--green);}
+    .booking-card-item{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px;display:flex;align-items:center;gap:16px;}
+    .booking-status{padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+    .status-confirmed{background:#d1fae5;color:#065f46;}
+    .status-pending{background:#fef3c7;color:#92400e;}
+    .status-completed{background:#e0e7ff;color:#3730a3;}
+    .status-cancelled{background:#fee2e2;color:#991b1b;}
     /* AUTH MODAL */
     .auth-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:3000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px);}
     .auth-overlay.open{display:flex;}
@@ -374,6 +403,39 @@
     .auth-error{background:#fff5f5;border:1px solid #fecaca;border-radius:8px;padding:10px 14px;font-size:13px;color:var(--red);margin-bottom:16px;display:none;}
     .auth-success-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:600;z-index:4000;display:none;box-shadow:0 8px 24px rgba(26,92,58,0.3);}
 
+
+    /* MEMBER DASHBOARD */
+    .dash-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:3000;align-items:flex-start;justify-content:center;padding:20px;backdrop-filter:blur(6px);overflow-y:auto;}
+    .dash-overlay.open{display:flex;}
+    .dash-box{background:var(--cream);border-radius:20px;width:100%;max-width:760px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.4);margin:auto;}
+    .dash-header{background:var(--navy);padding:0;position:relative;}
+    .dash-card{background:linear-gradient(135deg,#0d2137 0%,#1a3a5c 50%,#0d2137 100%);padding:32px;position:relative;overflow:hidden;}
+    .dash-card::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(200,146,42,0.15),transparent 70%);}
+    .dash-card-logo{font-family:'Permanent Marker',cursive;font-size:20px;color:var(--gold2);letter-spacing:2px;margin-bottom:20px;opacity:0.8;}
+    .dash-card-name{font-family:'Playfair Display',serif;font-size:24px;color:#fff;font-weight:700;margin-bottom:4px;}
+    .dash-card-code{font-size:13px;color:var(--gold2);letter-spacing:3px;font-weight:700;margin-bottom:16px;font-family:monospace;}
+    .dash-card-row{display:flex;gap:24px;flex-wrap:wrap;}
+    .dash-card-item{font-size:11px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;}
+    .dash-card-item strong{display:block;font-size:13px;color:rgba(255,255,255,0.85);margin-top:2px;text-transform:none;letter-spacing:0;}
+    .dash-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.1);border:none;color:rgba(255,255,255,0.7);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;}
+    .dash-tabs{display:flex;background:#fff;border-bottom:1px solid var(--border);}
+    .dash-tab{flex:1;padding:14px;text-align:center;font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;border:none;background:none;font-family:'DM Sans',sans-serif;transition:0.2s;border-bottom:2px solid transparent;margin-bottom:-1px;}
+    .dash-tab.active{color:var(--navy);border-bottom-color:var(--gold);}
+    .dash-body{background:#fff;padding:24px;}
+    .dash-section{display:none;}
+    .dash-section.active{display:block;}
+    .dash-field{margin-bottom:16px;}
+    .dash-field label{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+    .dash-field input,.dash-field select,.dash-field textarea{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border 0.2s;box-sizing:border-box;}
+    .dash-field input:focus,.dash-field select:focus,.dash-field textarea:focus{border-color:var(--gold);}
+    .dash-save{background:var(--navy);color:#fff;border:none;border-radius:10px;padding:12px 24px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:0.2s;}
+    .dash-save:hover{background:var(--green);}
+    .booking-card-item{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px;display:flex;align-items:center;gap:16px;}
+    .booking-status{padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+    .status-confirmed{background:#d1fae5;color:#065f46;}
+    .status-pending{background:#fef3c7;color:#92400e;}
+    .status-completed{background:#e0e7ff;color:#3730a3;}
+    .status-cancelled{background:#fee2e2;color:#991b1b;}
     /* AUTH MODAL */
     .auth-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:3000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px);}
     .auth-overlay.open{display:flex;}
@@ -412,7 +474,55 @@
 
     /* RESPONSIVE */
     @media(max-width:960px){.footer-top{grid-template-columns:1fr 1fr;}.signboard-grid{grid-template-columns:1fr!important;}}.stay-grid,.promo-grid,.contact-grid,.faq-grid{grid-template-columns:1fr;}}
-    @media(max-width:640px){#credentials .section-inner>div:last-child{grid-template-columns:1fr 1fr!important;}.nav-links{display:none;}.nav-hamburger{display:flex;}.booking-grid{grid-template-columns:1fr 1fr;}.booking-grid .book-btn-wrap{grid-column:1/-1;}.book-btn{width:100%;}.footer-top{grid-template-columns:1fr;gap:28px;}section{padding:64px 16px;}.booking-card{padding:20px 16px;}}
+    @media(max-width:960px){
+      .footer-top{grid-template-columns:1fr 1fr;}
+      .signboard-grid{grid-template-columns:1fr!important;}
+      .mv-grid{grid-template-columns:1fr!important;}
+      .stay-grid,.promo-grid,.contact-grid,.faq-grid{grid-template-columns:1fr;}
+      .careers-grid{grid-template-columns:1fr!important;}
+      #credentials .section-inner>div:last-child{grid-template-columns:1fr 1fr!important;}
+    }
+    @media(max-width:640px){
+      .nav-links{display:none;}
+      .nav-hamburger{display:flex;}
+      .booking-grid{grid-template-columns:1fr;}
+      .booking-grid .book-btn-wrap{grid-column:1/-1;}
+      .book-btn{width:100%;}
+      .footer-top{grid-template-columns:1fr;gap:24px;}
+      section{padding:40px 16px;}
+      .booking-card{padding:16px;}
+      .hero-mats{font-size:clamp(60px,18vw,120px)!important;}
+      .mv-grid{grid-template-columns:1fr!important;}
+      .packages-grid{grid-template-columns:1fr!important;}
+      .why-grid{grid-template-columns:1fr!important;}
+      .services-grid{grid-template-columns:1fr 1fr!important;}
+      .signboard-grid{grid-template-columns:1fr!important;}
+      .promo-grid{grid-template-columns:1fr!important;}
+      .contact-grid{grid-template-columns:1fr!important;}
+      #credentials .section-inner>div:last-child{grid-template-columns:1fr 1fr!important;}
+      .future-cats{grid-template-columns:1fr!important;}
+      .footer-top{grid-template-columns:1fr!important;}
+      .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px;}
+      .why-grid{grid-template-columns:1fr!important;}
+      .why-card:nth-child(odd){padding-right:0!important;border-right:none!important;border-bottom:1px solid var(--border)!important;}
+      .why-card:nth-child(even){padding-left:0!important;}
+      .section-title{font-size:clamp(22px,6vw,32px)!important;}
+      .testi-grid{grid-template-columns:1fr!important;}
+      .links-grid{grid-template-columns:1fr 1fr!important;}
+      .emergency-grid{grid-template-columns:1fr 1fr!important;}
+      #videos .section-inner>div:last-child{grid-template-columns:1fr!important;}
+      .auth-box{margin:10px;}
+      .nav-brand-text .nav-sub{display:none;}
+      .hero-tagline{font-size:16px!important;}
+      .hero-sub{font-size:11px!important;letter-spacing:1px!important;}
+    }
+    @media(max-width:640px){.video-grid{grid-template-columns:1fr!important;}}
+    @media(max-width:400px){
+      .services-grid{grid-template-columns:1fr!important;}
+      .links-grid{grid-template-columns:1fr!important;}
+      .emergency-grid{grid-template-columns:1fr!important;}
+      #credentials .section-inner>div:last-child{grid-template-columns:1fr!important;}
+    }
     @media(max-width:480px){.booking-grid{grid-template-columns:1fr;}}
   </style>
   <!-- Google Analytics -->
@@ -424,10 +534,11 @@
     gtag('config', 'G-9BWDFNBFXP');
   </script>
 
-  <!-- Firebase Auth -->
+  <!-- Firebase Auth + Firestore -->
   <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
     import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, updateProfile } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
+    import { getFirestore, doc, setDoc, getDoc, updateDoc, collection, addDoc, getDocs, query, where, orderBy } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
 
     const firebaseConfig = {
       apiKey: "AIzaSyCjXO1hnN7Hi08ptnZfr4kp3m-dsnBP4u0",
@@ -440,57 +551,147 @@
 
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
+    const db = getFirestore(app);
     const googleProvider = new GoogleAuthProvider();
 
-    // Auth state listener
-    onAuthStateChanged(auth, function(user) {
-      var loginBtn = document.getElementById('nav-login-btn');
-      var userMenu = document.getElementById('nav-user-menu');
-      var userName = document.getElementById('nav-user-name');
+    // Generate membership number
+    async function generateMemberCode() {
+      try {
+        const counterRef = doc(db, 'meta', 'memberCounter');
+        const counterSnap = await getDoc(counterRef);
+        let nextNum = 1;
+        if (counterSnap.exists()) {
+          nextNum = (counterSnap.data().count || 0) + 1;
+        }
+        await setDoc(counterRef, { count: nextNum }, { merge: true });
+        return 'MATS-M' + String(nextNum).padStart(3, '0');
+      } catch(e) {
+        return 'MATS-M' + Math.floor(Math.random() * 900 + 100);
+      }
+    }
+
+    // Create member profile in Firestore
+    async function createMemberProfile(user, name) {
+      const memberRef = doc(db, 'members', user.uid);
+      const existing = await getDoc(memberRef);
+      if (!existing.exists()) {
+        const memberCode = await generateMemberCode();
+        await setDoc(memberRef, {
+          uid: user.uid,
+          name: name || user.displayName || 'MATS Member',
+          email: user.email,
+          phone: '',
+          nationality: '',
+          memberCode: memberCode,
+          memberSince: new Date().toISOString(),
+          preferences: '',
+          totalBookings: 0
+        });
+        return memberCode;
+      }
+      return existing.data().memberCode;
+    }
+
+    // Load member profile
+    async function loadMemberProfile(uid) {
+      try {
+        const memberRef = doc(db, 'members', uid);
+        const snap = await getDoc(memberRef);
+        if (snap.exists()) return snap.data();
+        return null;
+      } catch(e) { return null; }
+    }
+
+    // Load bookings
+    async function loadBookings(uid) {
+      try {
+        const q = query(collection(db, 'bookings'), where('uid', '==', uid), orderBy('date', 'desc'));
+        const snap = await getDocs(q);
+        return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      } catch(e) { return []; }
+    }
+
+    // Auth state
+    onAuthStateChanged(auth, async function(user) {
+      const loginBtn = document.getElementById('nav-login-btn');
+      const userMenu = document.getElementById('nav-user-menu');
+      const userName = document.getElementById('nav-user-name');
       if (user) {
         if (loginBtn) loginBtn.style.display = 'none';
         if (userMenu) userMenu.style.display = 'flex';
-        if (userName) userName.textContent = user.displayName || user.email.split('@')[0];
+        const profile = await loadMemberProfile(user.uid);
+        const displayName = profile ? profile.name : (user.displayName || user.email.split('@')[0]);
+        if (userName) userName.textContent = displayName;
+        window.currentUser = user;
+        window.currentProfile = profile;
+        // If dashboard is open, refresh it
+        if (document.getElementById('member-dashboard') && document.getElementById('member-dashboard').classList.contains('open')) {
+          showDashboard(user, profile);
+        }
       } else {
         if (loginBtn) loginBtn.style.display = 'flex';
         if (userMenu) userMenu.style.display = 'none';
+        window.currentUser = null;
+        window.currentProfile = null;
       }
     });
 
-    // Expose functions to window
+    // Expose to window
     window.matsAuth = {
       signUp: async function(name, email, password) {
         try {
-          var cred = await createUserWithEmailAndPassword(auth, email, password);
+          const cred = await createUserWithEmailAndPassword(auth, email, password);
           await updateProfile(cred.user, { displayName: name });
+          const code = await createMemberProfile(cred.user, name);
           closeAuthModal();
-          showAuthSuccess('Welcome to MATS, ' + name + '! 🎉');
-        } catch(e) {
-          showAuthError(e.message);
-        }
+          showAuthSuccess('Welcome to MATS, ' + name + '! Your membership code is ' + code + ' 🎉');
+        } catch(e) { showAuthError(e.message); }
       },
       signIn: async function(email, password) {
         try {
-          await signInWithEmailAndPassword(auth, email, password);
+          const cred = await signInWithEmailAndPassword(auth, email, password);
+          await createMemberProfile(cred.user, cred.user.displayName);
           closeAuthModal();
           showAuthSuccess('Welcome back! 🙏');
-        } catch(e) {
-          showAuthError(e.message);
-        }
+        } catch(e) { showAuthError(e.message); }
       },
       signInGoogle: async function() {
         try {
-          await signInWithPopup(auth, googleProvider);
+          const cred = await signInWithPopup(auth, googleProvider);
+          await createMemberProfile(cred.user, cred.user.displayName);
           closeAuthModal();
           showAuthSuccess('Signed in with Google! 🙏');
-        } catch(e) {
-          showAuthError(e.message);
-        }
+        } catch(e) { showAuthError(e.message); }
       },
       signOut: async function() {
         await signOut(auth);
-        var dd = document.getElementById('user-dropdown');
+        const dd = document.getElementById('user-dropdown');
         if (dd) dd.style.display = 'none';
+      },
+      openDashboard: async function() {
+        const dd = document.getElementById('user-dropdown');
+        if (dd) dd.style.display = 'none';
+        if (!window.currentUser) return;
+        const profile = await loadMemberProfile(window.currentUser.uid);
+        const bookings = await loadBookings(window.currentUser.uid);
+        window.currentProfile = profile;
+        window.currentBookings = bookings;
+        showDashboard(window.currentUser, profile, bookings);
+      },
+      saveProfile: async function() {
+        if (!window.currentUser) return;
+        const name = document.getElementById('dash-name').value.trim();
+        const phone = document.getElementById('dash-phone').value.trim();
+        const nationality = document.getElementById('dash-nationality').value.trim();
+        const preferences = document.getElementById('dash-preferences').value.trim();
+        try {
+          await updateDoc(doc(db, 'members', window.currentUser.uid), { name, phone, nationality, preferences });
+          await updateProfile(window.currentUser, { displayName: name });
+          const userName = document.getElementById('nav-user-name');
+          if (userName) userName.textContent = name;
+          document.getElementById('dash-save-msg').style.display = 'block';
+          setTimeout(function() { document.getElementById('dash-save-msg').style.display = 'none'; }, 3000);
+        } catch(e) { alert('Error saving: ' + e.message); }
       }
     };
   </script>
@@ -571,6 +772,7 @@
             <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-weight:700;">MATS Member</div>
             <div id="dropdown-name" style="font-size:14px;font-weight:700;color:var(--text);margin-top:4px;"></div>
           </div>
+          <a href="javascript:void(0)" onclick="window.matsAuth.openDashboard()" style="display:flex;align-items:center;gap:10px;padding:12px 16px;font-size:14px;color:var(--text);border-bottom:1px solid var(--border);font-weight:700;background:var(--cream);">🪪 My Dashboard</a>
           <a href="#booking" onclick="toggleUserDropdown()" style="display:flex;align-items:center;gap:10px;padding:12px 16px;font-size:14px;color:var(--text);border-bottom:1px solid var(--border);">✈ Book a Flight</a>
           <a href="#packages" onclick="toggleUserDropdown()" style="display:flex;align-items:center;gap:10px;padding:12px 16px;font-size:14px;color:var(--text);border-bottom:1px solid var(--border);">🗺️ Tour Packages</a>
           <a href="#contact" onclick="toggleUserDropdown()" style="display:flex;align-items:center;gap:10px;padding:12px 16px;font-size:14px;color:var(--text);border-bottom:1px solid var(--border);">📞 Contact MATS</a>
@@ -963,7 +1165,7 @@
     <div class="section-eyebrow" style="color:var(--gold);">Nepal on Video</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;">See Nepal Through Our Lens</h2>
     <p style="font-size:16px;color:rgba(255,255,255,0.55);max-width:560px;line-height:1.75;margin-bottom:40px;">Explore Nepal's breathtaking landscapes and rich culture through these featured videos.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:stretch;">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:stretch;" class="video-grid">
       <!-- YouTube 1 -->
       <div style="border-radius:16px;overflow:hidden;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);box-shadow:0 16px 48px rgba(0,0,0,0.4);">
         <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
@@ -1221,7 +1423,7 @@
     <div class="section-eyebrow">Careers</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:700;color:var(--text);line-height:1.15;margin-bottom:16px;">Join Our Team</h2>
     <p style="font-size:16px;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:32px;">We are looking for talented, passionate individuals who love travel and want to be part of building something meaningful in Nepal's tourism industry.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;">
+    <div class="careers-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;">
       <div style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:36px;transition:all 0.3s;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 16px 48px rgba(200,146,42,0.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
         <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));"></div>
         <div style="font-size:40px;margin-bottom:16px;">🌱</div>
@@ -1427,13 +1629,7 @@
           <div class="fcc-item">🎵 <a href="https://www.tiktok.com/@matsnepal" target="_blank">@matsnepal</a></div>
         </div>
       </div>
-    </div>
-    <div class="footer-reg-strip">
-      <div class="reg-item"><div class="reg-label">Travel Agency Licence</div><div class="reg-value">4593/082/083</div></div>
-      <div class="reg-item"><div class="reg-label">Company Reg. No.</div><div class="reg-value">358879</div></div>
-      <div class="reg-item"><div class="reg-label">PAN No.</div><div class="reg-value">621282090</div></div>
-      <div class="reg-item"><div class="reg-label">Small Industry Reg.</div><div class="reg-value">4240/082/083</div></div>
-      <div class="reg-item"><div class="reg-label">Established</div><div class="reg-value">2081 BS / 2024 AD</div></div>
+    </div><div class="reg-value">4593/082/083</div></div><div class="reg-value">358879</div></div><div class="reg-value">621282090</div></div><div class="reg-value">4240/082/083</div></div><div class="reg-value">2081 BS / 2024 AD</div></div>
     </div>
     <hr class="footer-divider"/>
     <div class="footer-bottom">
@@ -1454,59 +1650,98 @@
   <div class="modal-box">
     <button class="modal-close" onclick="document.getElementById('privacy-modal').classList.remove('open')">✕</button>
     <div class="modal-title">Privacy Policy</div>
-    <div class="modal-date">Last updated: March 2026 · Maitri Apartment & Travel Services Pvt. Ltd.</div>
+    <div class="modal-date">Last updated: March 2025 · Maitri Apartment & Travel Services Pvt. Ltd.</div>
     <div class="modal-body">
-
       <h3>1. Information We Collect</h3>
-      <p>When you submit a booking request, contact us, or create an account, we may collect your name, phone number, email address, travel details, and any additional information you choose to provide.</p>
-      <p>If you create an account or log in, we may collect account-related information such as your email address and profile name. If you sign in using Google, we may receive basic profile information from your Google account.</p>
-      <p>We do not collect payment information directly — payments are handled separately via agreed methods (eSewa, Khalti, bank transfer, or cash).</p>
-
+      <p>When you submit a booking request or contact us, we collect your name, phone number, email address, travel details and any other information you voluntarily provide. We do not collect payment information directly — payments are handled separately via agreed methods (eSewa, Khalti, bank transfer or cash).</p>
       <h3>2. How We Use Your Information</h3>
       <ul>
-        <li>To process your flight, bus, or tour booking requests</li>
-        <li>To create and manage your account</li>
-        <li>To contact you via WhatsApp, phone, or email about your booking</li>
+        <li>To process your flight, bus or tour booking requests</li>
+        <li>To contact you via WhatsApp, phone or email about your booking</li>
         <li>To send your e-ticket or booking confirmation</li>
         <li>To respond to your enquiries and provide customer support</li>
       </ul>
-      <p>By using our services, you consent to the collection and use of your information as described in this policy.</p>
-
-      <h3>3. Authentication & Third-Party Services</h3>
-      <p>We use Firebase Authentication (a service provided by Google) to manage user login and account access. When you log in using Google or email authentication, your data may be processed by Google in accordance with their privacy policy.</p>
-
-      <h3>4. Advertising & Third-Party Ads</h3>
-      <p>We may display advertisements from third-party advertising partners such as Google AdSense. These partners may use cookies or similar technologies to show you relevant ads based on your browsing activity.</p>
-      <p>Third-party vendors, including Google, may use cookies (such as the DoubleClick cookie) to serve ads based on your visits to this and other websites.</p>
-      <p>You can choose to disable personalized advertising by visiting Google Ads Settings.</p>
-
-      <h3>5. Information Sharing</h3>
-      <p>We do not sell or rent your personal information.</p>
-      <p>We only share your information with:</p>
-      <ul>
-        <li>Airlines, bus operators, or accommodation providers as required to complete your booking</li>
-        <li>Service providers (such as Google/Firebase and advertising partners) for authentication, ads, and technical operations</li>
-      </ul>
-      <p>These third parties process your data according to their own privacy policies.</p>
-
-      <h3>6. Data Security</h3>
-      <p>We take reasonable administrative and technical measures to protect your personal information. However, no method of transmission over the internet is completely secure.</p>
-
-      <h3>7. Data Retention</h3>
-      <p>We retain your personal information only as long as necessary to provide our services, complete your bookings, and comply with legal obligations.</p>
-
-      <h3>8. Cookies</h3>
-      <p>This website may use cookies or similar technologies for authentication and advertising purposes. Services such as Firebase Authentication, Google Ads, and embedded content like Google Maps may set cookies in your browser.</p>
-
-      <h3>9. Your Rights</h3>
+      <h3>3. Information Sharing</h3>
+      <p>We do not sell, rent or share your personal information with third parties for marketing purposes. We only share your details with airlines, bus operators or accommodation providers strictly as required to complete your booking.</p>
+      <h3>4. Data Security</h3>
+      <p>We take reasonable measures to protect your personal information. No transmission over the internet is completely secure. We encourage you to contact us on WhatsApp for sensitive communications.</p>
+      <h3>5. Cookies</h3>
+      <p>This website does not use tracking cookies or third-party analytics tools. Google Maps embedded on this page may set cookies according to Google's own privacy policy.</p>
+      <h3>6. Your Rights</h3>
       <p>You may request access to, correction of, or deletion of your personal information at any time by contacting us at info@mats.com.np or on WhatsApp at 9823356668.</p>
+      <h3>7. Contact</h3>
+      <p>For privacy-related concerns: <strong>info@mats.com.np</strong> · <strong>9851007025</strong> · Maitri Apartment & Travel Services Pvt. Ltd., Mitrapark-7, Kathmandu, Nepal.</p>
+    </div>
+  </div>
+</div>
 
-      <h3>10. Children’s Privacy</h3>
-      <p>Our services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children.</p>
 
-      <h3>11. Contact</h3>
-      <p>For privacy-related concerns: <strong>info@mats.com.np</strong> · <strong>9851007025</strong><br>
-      Maitri Apartment & Travel Services Pvt. Ltd., Mitrapark-7, Kathmandu, Nepal.</p>
+<!-- MEMBER DASHBOARD -->
+<div class="dash-overlay" id="member-dashboard" onclick="if(event.target===this)closeDashboard()">
+  <div class="dash-box">
+    <div class="dash-header">
+      <div class="dash-card">
+        <div class="dash-card-logo">MATS</div>
+        <div class="dash-card-name" id="dash-display-name">Member</div>
+        <div class="dash-card-code" id="dash-display-code">MATS-M000</div>
+        <div class="dash-card-row">
+          <div class="dash-card-item">Member Since<strong id="dash-display-since">—</strong></div>
+          <div class="dash-card-item">Email<strong id="dash-display-email">—</strong></div>
+          <div class="dash-card-item">Status<strong style="color:var(--gold2);">Active ✓</strong></div>
+        </div>
+      </div>
+      <button class="dash-close" onclick="closeDashboard()">✕</button>
+      <div class="dash-tabs">
+        <button class="dash-tab active" onclick="switchDashTab('profile',this)">👤 Profile</button>
+        <button class="dash-tab" onclick="switchDashTab('bookings',this)">✈ My Bookings</button>
+        <button class="dash-tab" onclick="switchDashTab('card',this)">🪪 Member Card</button>
+      </div>
+    </div>
+    <div class="dash-body">
+
+      <!-- PROFILE TAB -->
+      <div class="dash-section active" id="dash-profile">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="dash-field"><label>Full Name</label><input type="text" id="dash-name" placeholder="Your full name"/></div>
+          <div class="dash-field"><label>Phone Number</label><input type="text" id="dash-phone" placeholder="+977 98XXXXXXXX"/></div>
+          <div class="dash-field"><label>Nationality</label><input type="text" id="dash-nationality" placeholder="e.g. Nepali"/></div>
+          <div class="dash-field"><label>Travel Preferences</label><input type="text" id="dash-preferences" placeholder="e.g. Pilgrimage, Adventure"/></div>
+        </div>
+        <button class="dash-save" onclick="window.matsAuth.saveProfile()">Save Profile</button>
+        <div id="dash-save-msg" style="display:none;margin-top:12px;padding:10px 14px;background:#d1fae5;border-radius:8px;font-size:13px;color:#065f46;font-weight:600;">✅ Profile saved successfully!</div>
+      </div>
+
+      <!-- BOOKINGS TAB -->
+      <div class="dash-section" id="dash-bookings">
+        <div id="bookings-list">
+          <div style="text-align:center;padding:40px 20px;color:var(--muted);">
+            <div style="font-size:48px;margin-bottom:12px;">✈</div>
+            <div style="font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px;">No bookings yet</div>
+            <div style="font-size:14px;line-height:1.7;">Your bookings will appear here once confirmed by MATS.<br/>To book, use the <a href="#booking" onclick="closeDashboard()" style="color:var(--green);font-weight:700;">booking form</a> on our homepage.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEMBER CARD TAB -->
+      <div class="dash-section" id="dash-card">
+        <div style="background:linear-gradient(135deg,var(--navy) 0%,#1a3a5c 50%,var(--navy) 100%);border-radius:16px;padding:28px;position:relative;overflow:hidden;margin-bottom:20px;">
+          <div style="position:absolute;top:-30px;right:-30px;width:150px;height:150px;background:radial-gradient(circle,rgba(200,146,42,0.2),transparent 70%);"></div>
+          <div style="position:absolute;bottom:-20px;left:-20px;width:100px;height:100px;background:radial-gradient(circle,rgba(26,92,58,0.2),transparent 70%);"></div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;position:relative;z-index:1;">
+            <div style="font-family:'Permanent Marker',cursive;font-size:22px;color:var(--gold2);letter-spacing:2px;">MATS</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.4);text-align:right;letter-spacing:1px;text-transform:uppercase;">Member Card<br/>Maitri Apartment &<br/>Travel Services</div>
+          </div>
+          <div style="position:relative;z-index:1;">
+            <div style="font-family:'Playfair Display',serif;font-size:20px;color:#fff;font-weight:700;margin-bottom:4px;" id="card-name">Member Name</div>
+            <div style="font-size:16px;color:var(--gold2);letter-spacing:4px;font-weight:700;font-family:monospace;margin-bottom:20px;" id="card-code">MATS-M000</div>
+            <div style="display:flex;gap:32px;">
+              <div><div style="font-size:10px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;">Member Since</div><div style="font-size:13px;color:#fff;margin-top:2px;" id="card-since">—</div></div>
+              <div><div style="font-size:10px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;">Status</div><div style="font-size:13px;color:var(--gold2);margin-top:2px;font-weight:700;">Active ✓</div></div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--muted);text-align:center;line-height:1.7;">Take a screenshot of your membership card to save it. Show it when contacting MATS for priority service.</p>
+      </div>
 
     </div>
   </div>
@@ -1776,6 +2011,69 @@ document.addEventListener('click', function(e) {
     dd.style.display = 'none';
   }
 });
+
+// DASHBOARD
+function showDashboard(user, profile, bookings) {
+  var overlay = document.getElementById('member-dashboard');
+  if (!overlay) return;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  if (profile) {
+    var since = profile.memberSince ? new Date(profile.memberSince).toLocaleDateString('en-NP', {year:'numeric',month:'long'}) : '—';
+    // Header card
+    setText('dash-display-name', profile.name || user.displayName || 'Member');
+    setText('dash-display-code', profile.memberCode || '—');
+    setText('dash-display-since', since);
+    setText('dash-display-email', user.email || '—');
+    // Profile form
+    setVal('dash-name', profile.name || '');
+    setVal('dash-phone', profile.phone || '');
+    setVal('dash-nationality', profile.nationality || '');
+    setVal('dash-preferences', profile.preferences || '');
+    // Member card
+    setText('card-name', profile.name || 'Member');
+    setText('card-code', profile.memberCode || '—');
+    setText('card-since', since);
+  }
+
+  // Bookings
+  var list = document.getElementById('bookings-list');
+  if (list) {
+    var bk = bookings || window.currentBookings || [];
+    if (bk.length === 0) {
+      list.innerHTML = '<div style="text-align:center;padding:40px 20px;color:var(--muted);"><div style="font-size:48px;margin-bottom:12px;">✈</div><div style="font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px;">No bookings yet</div><div style="font-size:14px;line-height:1.7;">Your bookings will appear here once confirmed by MATS.<br/>To book, use the <a href=\"#booking\" onclick=\"closeDashboard()\" style=\"color:var(--green);font-weight:700;\">booking form</a> on our homepage.</div></div>';
+    } else {
+      var html = '';
+      bk.forEach(function(b) {
+        var statusClass = 'status-' + (b.status || 'pending').toLowerCase();
+        html += '<div class="booking-card-item">';
+        html += '<div style="font-size:32px;">' + (b.type === 'flight' ? '✈' : b.type === 'bus' ? '🚌' : '🗺️') + '</div>';
+        html += '<div style="flex:1;"><div style="font-size:14px;font-weight:700;color:var(--text);">' + (b.description || 'Booking') + '</div>';
+        html += '<div style="font-size:12px;color:var(--muted);margin-top:2px;">' + (b.date || '—') + ' · ' + (b.route || '') + '</div></div>';
+        html += '<span class="booking-status ' + statusClass + '">' + (b.status || 'Pending') + '</span></div>';
+      });
+      list.innerHTML = html;
+    }
+  }
+}
+
+function setText(id, val) { var el = document.getElementById(id); if (el) el.textContent = val; }
+function setVal(id, val) { var el = document.getElementById(id); if (el) el.value = val; }
+
+function closeDashboard() {
+  var overlay = document.getElementById('member-dashboard');
+  if (overlay) overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function switchDashTab(tab, btn) {
+  document.querySelectorAll('.dash-section').forEach(function(s) { s.classList.remove('active'); });
+  document.querySelectorAll('.dash-tab').forEach(function(b) { b.classList.remove('active'); });
+  var section = document.getElementById('dash-' + tab);
+  if (section) section.classList.add('active');
+  if (btn) btn.classList.add('active');
+}
 
 // MOBILE NAV
 function toggleMobileNav() {
