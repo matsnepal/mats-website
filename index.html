@@ -44,7 +44,7 @@
     img{max-width:100%;display:block;}
 
     /* NAV */
-    #navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(13,33,55,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(200,146,42,0.2);padding:0 32px;height:70px;display:flex;align-items:center;justify-content:space-between;}
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(13,33,55,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(200,146,42,0.2);padding:0 32px;height:70px;display:flex;align-items:center;justify-content:space-between;}
     .nav-brand{display:flex;align-items:center;gap:12px;}
     .nav-logo-img{height:46px;width:46px;border-radius:50%;object-fit:cover;mix-blend-mode:lighten;border:1.5px solid rgba(200,146,42,0.4);}
     .nav-brand-text{line-height:1.2;}
@@ -66,7 +66,7 @@
     .hero-bg{position:absolute;inset:-60px;background:url('https://images.unsplash.com/photo-1533130061792-64b345e4a833?w=1800&q=80&fit=crop') center/cover no-repeat;will-change:transform;filter:brightness(0.45) saturate(1.2);pointer-events:none;}
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(13,33,55,0.5) 0%,rgba(13,33,55,0.2) 40%,rgba(26,92,58,0.3) 100%);pointer-events:none;}
     .hero-overlay-bottom{position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to top,var(--cream),transparent);pointer-events:none;}
-    .hero-inner{position:relative;z-index:2;max-width:900px;width:100%;text-align:center;}
+    .hero-inner{position:relative;z-index:9000;max-width:900px;width:100%;text-align:center;}
     .hero-mats{font-family:'Permanent Marker',cursive;font-size:clamp(64px,14vw,136px);line-height:1;letter-spacing:6px;animation:heroFadeUp 1s ease both;margin-bottom:8px;background:linear-gradient(135deg,#fff 0%,#ffffff 30%,#DC143C 55%,#003893 80%,#fff 100%);background-size:300% 300%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 4px 20px rgba(220,20,60,0.3));}
     .hero-mats span{color:var(--gold2);}
     .hero-tagline{font-family:'Playfair Display',serif;font-size:clamp(16px,3vw,24px);font-weight:700;color:rgba(255,255,255,0.92);letter-spacing:1px;margin-bottom:6px;animation:heroFadeUp 1s ease 0.2s both;text-shadow:0 2px 10px rgba(0,0,0,0.4);}
@@ -696,50 +696,9 @@
     };
   </script>
 </head>
-<body>
+<body style="overflow:auto!important;pointer-events:auto!important;">
 
-<!-- LOADING SCREEN -->
-<div id="mats-loader" style="position:fixed;inset:0;background:var(--navy);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transition:opacity 0.6s ease,visibility 0.6s ease;">
-  <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
-    <div style="font-family:'Permanent Marker',cursive;font-size:72px;color:#fff;letter-spacing:6px;line-height:1;text-shadow:0 0 40px rgba(200,146,42,0.4);">
-      M<span style="color:var(--gold2);">A</span>TS
-    </div>
-    <div style="font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:3px;text-transform:uppercase;">Maitri Apartment & Travel Services</div>
-  </div>
-  <div style="width:200px;height:2px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;">
-    <div id="mats-loader-bar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:2px;transition:width 0.1s linear;"></div>
-  </div>
-  <div style="font-size:12px;color:rgba(255,255,255,0.25);letter-spacing:2px;text-transform:uppercase;">Loading...</div>
-</div>
-<style>
-  #mats-loader.hidden{opacity:0;visibility:hidden;pointer-events:none;}
-  :root{--gold:#c8922a;--gold2:#e8a830;--navy:#0d2137;}
-</style>
-<script>
-  (function(){
-    var bar = document.getElementById('mats-loader-bar');
-    var loader = document.getElementById('mats-loader');
-    var width = 0;
-    var interval = setInterval(function(){
-      width += Math.random() * 18 + 8;
-      if(width >= 95) { width = 95; clearInterval(interval); }
-      bar.style.width = Math.min(width, 95) + '%';
-    }, 120);
-    document.addEventListener('DOMContentLoaded', function(){
-      clearInterval(interval);
-      bar.style.width = '100%';
-      setTimeout(function(){
-        loader.classList.add('hidden');
-        document.body.style.overflow = '';
-      }, 300);
-    });
-    document.body.style.overflow = 'hidden';
-    setTimeout(function(){
-      loader.classList.add('hidden');
-      document.body.style.overflow = '';
-    }, 1500);
-  })();
-</script>
+
 
 
 <!-- NAVBAR -->
@@ -1989,8 +1948,7 @@ function toggleAvail(id) {
 
 // SAFETY: ensure body is never stuck
 setTimeout(function(){
-  var loader = document.getElementById('mats-loader');
-  if(loader){loader.classList.add('hidden');}
+
   document.body.style.overflow = '';
   document.body.style.pointerEvents = '';
 }, 500);
@@ -2066,7 +2024,7 @@ function showDashboard(user, profile, bookings) {
   var overlay = document.getElementById('member-dashboard');
   if (!overlay) return;
   overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  // overflow removed
 
   if (profile) {
     var since = profile.memberSince ? new Date(profile.memberSince).toLocaleDateString('en-NP', {year:'numeric',month:'long'}) : '—';
