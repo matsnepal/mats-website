@@ -725,19 +725,19 @@
       if(width >= 95) { width = 95; clearInterval(interval); }
       bar.style.width = Math.min(width, 95) + '%';
     }, 120);
-    window.addEventListener('load', function(){
+    document.addEventListener('DOMContentLoaded', function(){
       clearInterval(interval);
       bar.style.width = '100%';
       setTimeout(function(){
         loader.classList.add('hidden');
         document.body.style.overflow = '';
-      }, 400);
+      }, 300);
     });
     document.body.style.overflow = 'hidden';
     setTimeout(function(){
       loader.classList.add('hidden');
       document.body.style.overflow = '';
-    }, 3000);
+    }, 1500);
   })();
 </script>
 
@@ -1986,6 +1986,14 @@ function toggleAvail(id) {
     el.textContent = availStatus[id] ? '● Available' : '● Unavailable';
   }
 }
+
+// SAFETY: ensure body is never stuck
+setTimeout(function(){
+  var loader = document.getElementById('mats-loader');
+  if(loader){loader.classList.add('hidden');}
+  document.body.style.overflow = '';
+  document.body.style.pointerEvents = '';
+}, 500);
 
 // PARALLAX
 window.addEventListener('scroll', function() {
