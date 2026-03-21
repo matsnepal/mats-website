@@ -1912,28 +1912,31 @@ var availStatus = {
 
 function checkAvailability(id, name) {
   var isAvail = availStatus[id] || false;
-  var modal = document.createElement('div');
-  modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:4000;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px);';
-  var box = document.createElement('div');
-  box.style.cssText = 'background:#fff;border-radius:20px;padding:32px;max-width:380px;width:100%;text-align:center;';
   var icon = isAvail ? '✅' : '❌';
   var color = isAvail ? '#065f46' : '#991b1b';
   var bg = isAvail ? '#d1fae5' : '#fee2e2';
   var statusText = isAvail ? 'Available' : 'Currently Unavailable';
   var msg = isAvail
-    ? 'Great news! <strong>' + name + '</strong> is currently available. Contact us to confirm your dates and complete your booking.'
-    : '<strong>' + name + '</strong> is not available right now. Contact us on WhatsApp — we may have alternative options for your dates.';
+    ? 'Great news! <strong>' + name + '</strong> is currently available. Contact us to confirm your dates.'
+    : '<strong>' + name + '</strong> is not available right now. Contact us — we may have alternatives.';
+  var overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:4000;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px);';
+  overlay.id = 'avail-overlay';
+  var box = document.createElement('div');
+  box.style.cssText = 'background:#fff;border-radius:20px;padding:32px;max-width:380px;width:100%;text-align:center;';
+  var waLink = 'https://wa.me/9779823356668?text=Hi%20MATS%2C%20I%20am%20interested%20in%20' + encodeURIComponent(name);
   box.innerHTML = '<div style="font-size:48px;margin-bottom:16px;">' + icon + '</div>'
     + '<div style="display:inline-block;background:' + bg + ';color:' + color + ';font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;margin-bottom:16px;">' + statusText + '</div>'
     + '<h3 style="font-size:18px;font-weight:700;color:#1a1a2a;margin-bottom:10px;">' + name + '</h3>'
     + '<p style="font-size:14px;color:#5a6070;line-height:1.7;margin-bottom:24px;">' + msg + '</p>'
     + '<div style="display:flex;gap:10px;justify-content:center;">'
-    + '<a href="https://wa.me/9779823356668?text=Hi%20MATS%2C%20I%20am%20interested%20in%20' + encodeURIComponent(name) + '" target="_blank" style="background:#25d366;color:#fff;padding:11px 20px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;">💬 WhatsApp</a>'
-    + '<button onclick="this.closest('div').parentElement.parentElement.remove()" style="background:#f3f4f6;color:#374151;border:none;padding:11px 20px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;">Close</button>'
+    + '<a href="' + waLink + '" target="_blank" style="background:#25d366;color:#fff;padding:11px 20px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;">WhatsApp</a>'
+    + '<button id="close-avail-btn" style="background:#f3f4f6;color:#374151;border:none;padding:11px 20px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;">Close</button>'
     + '</div>';
-  modal.appendChild(box);
-  modal.addEventListener('click', function(e){ if(e.target===modal) modal.remove(); });
-  document.body.appendChild(modal);
+  overlay.appendChild(box);
+  document.body.appendChild(overlay);
+  overlay.addEventListener('click', function(e){ if(e.target===overlay) overlay.remove(); });
+  document.getElementById('close-avail-btn').addEventListener('click', function(){ overlay.remove(); });
 }
 
 function toggleAvail(id) {
